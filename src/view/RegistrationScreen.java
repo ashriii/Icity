@@ -66,7 +66,6 @@ public class RegistrationScreen extends javax.swing.JFrame {
         jLabel12.setText("Communication Technologies (ICT)here");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 310, 30));
 
-        Jpanel1 = new roundedPanel(200, new Color(73,161,161));
         jPanel1.setBackground(new java.awt.Color(73, 161, 161));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
