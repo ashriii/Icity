@@ -5,52 +5,37 @@ package database;
 import javax.swing.*;
 
 import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 
 
 public class DbConnection {
 
-    public Connection connection;
-
-    Statement statement;
-
-    ResultSet resultSet;
-
-    int value;
+    
 
 
-
-    public DbConnection(){
+    public static Connection getConnection(){
+        Connection conn =null;
 
         try {
 
-            String username = "sql12580135";
-
-            String password = "iXijQSnNa5";
+            
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            connection = DriverManager.getConnection(
+            conn = DriverManager.getConnection(
 
-                    "jdbc:mysql://sql12.freesqldatabase.com/sql12580135",username,password);
+                    "jdbc:mysql://sql12.freesqldatabase.com/","sql12580135","iXijQSnNa5");
 
 
 
-                    if(connection!=null){
+            return conn;
 
-                        System.out.println("Connected to online database");
+        }catch (Exception ex){
 
-                    }else{
-
-                        System.out.println("Error connecting to database");
-
-                    }
-
-            statement = connection.createStatement();
-
-        }catch (Exception e){
-
-            e.printStackTrace();
+            System.out.println("There were errors connection to db.");
+            return null;
 
         }
 
@@ -62,45 +47,6 @@ public class DbConnection {
 
     // insert, update and delete
 
-    public int executeQuery(String query){
-
-        try {
-
-            value = statement.executeUpdate(query);
-
-            connection.close();
-
-        }catch (SQLIntegrityConstraintViolationException ex){
-
-            JOptionPane.showMessageDialog(null, "These details already exist!");
-
-        }catch (SQLException e){
-
-            e.printStackTrace();
-
-        }
-
-        return value;
-
-    }
-
-
-
-    public ResultSet fetchData(String query){
-
-        try {
-
-            resultSet = statement.executeQuery(query);
-
-        }catch (SQLException e){
-
-            e.printStackTrace();
-
-        }
-
-        return resultSet;
-
-    }
 
 
 
