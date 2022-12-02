@@ -1,59 +1,106 @@
 package database;
 
 
-
 import javax.swing.*;
-
 import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-
-
 
 public class DbConnection {
+   public Connection connection;
+   
+   Statement statement;
 
-    
+   ResultSet resultSet;
 
+   int value;
 
-    public static Connection getConnection(){
-        Connection conn =null;
+   public DbConnection(){
 
-        try {
-
-            
-
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            conn = DriverManager.getConnection(
-
-                    "jdbc:mysql://sql12.freesqldatabase.com/","sql12580135","iXijQSnNa5");
+       try {
 
 
+           String username = "root";
 
-            return conn;
+           String password = "DHilbert*1920";
 
-        }catch (Exception ex){
-
-            System.out.println("There were errors connection to db.");
-            return null;
-
-        }
-
-    }
+           Class.forName("com.mysql.cj.jdbc.Driver");
 
 
+           connection = DriverManager.getConnection(
 
-    // Via the use of sql query
+                   "jdbc:mysql://localhost:3306/traveller","root","DHilbert*1920");
 
-    // insert, update and delete
+                   if(connection!=null){
+
+                       System.out.println("Connected to online database");
+
+                   }else{
+
+                       System.out.println("Error connecting to database");
+
+                   }
+                   
+           statement = connection.createStatement();
+
+       }catch (Exception e){
+
+           e.printStackTrace();
 
 
 
+       }
+       
+   }
 
-    public static void main(String[] args) {
 
-        new DbConnection();
+   // Via the use of sql query
 
-    }
+   // insert, update and delete
+
+   public int executeQuery(String query){
+
+       try {
+
+           value = statement.executeUpdate(query);
+
+           connection.close();
+
+       }catch (SQLIntegrityConstraintViolationException ex){
+
+           JOptionPane.showMessageDialog(null, "These details already exist!");
+
+       }catch (SQLException e){
+
+           e.printStackTrace();
+
+       }
+
+       return value;
+
+
+   }
+
+   public ResultSet fetchData(String query){
+
+       try {
+
+           resultSet = statement.executeQuery(query);
+
+   }catch (SQLException e){
+
+           e.printStackTrace();
+
+       }
+
+       return resultSet;
+
+   }
+
+   public static void main(String[] args) {
+
+       new DbConnection();
+
+   }
+
+   
 
 }

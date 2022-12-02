@@ -5,9 +5,15 @@
 package view;
 
 import database.DbConnection;
+import java.beans.Statement;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import java.sql.*;
+import javax.swing.JFrame;
+import controller.TravellerController;
+import model.Traveller;
 
 
 /**
@@ -73,6 +79,7 @@ public class RegistrationScreen extends javax.swing.JFrame {
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 310, 30));
 
         jPanel1.setBackground(new java.awt.Color(73, 161, 161));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setText("Sign Up");
@@ -150,7 +157,7 @@ public class RegistrationScreen extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -191,7 +198,7 @@ public class RegistrationScreen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 4, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPasswordField_Confirm_Password_))
                 .addGap(29, 29, 29)
@@ -212,35 +219,24 @@ public class RegistrationScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
     private void jButton_Create_Account_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Create_Account_ActionPerformed
         // TODO add your handling code here:
         
-        String fullName = jTextField_Name_.getText();
+        String name = jTextField_Name_.getText();
         String email = jTextField_Email_.getText();
         String phoneNumber = jTextField_Phone_Number_.getText();
         String password = String.valueOf(jPasswordField_Password_.getPassword());
         String confirmPassword = String.valueOf(jPasswordField_Confirm_Password_.getPassword());
         
-        PreparedStatement ps;
-        String query ="INSERT INTO Registration_Table(FullName, Email, User_Number, Pass_word, Confirm_Password) VALUES(?,?,?,?,?)";
+        Traveller t1 = new Traveller(2, "Prasanna", "asadkhan2071@gmail.com", "9823661010", "asdfg123","asdfg123");
+        TravellerController sc = new TravellerController();
+        int insertedStudent = sc.insertStudent(t1);
 
-        try {
-        ps=DbConnection.getConnection().prepareStatement(query);
-        ps.setString(1, fullName);
-        ps.setString(2, email);
-        ps.setString(3, phoneNumber);
-        ps.setString(4,password);
-        ps.setString(5, confirmPassword);
-
-        
+        if (insertedStudent > 0) {
+            System.out.println("Student inserted");
+        } else {
+            System.out.println("Failed to insert student");
         }
-        catch (SQLException ex){
-            Logger.getLogger(RegistrationScreen.class.getName()).log(Level.ERROR,null,ex);
-        
-        
-        }
-
         
         
        
