@@ -11,7 +11,9 @@ public class Traveller{
 
     // creation of public getter and setter --> for student ID
 	public int getTr_id() {
+//               
 		return this.tr_id;
+                
 	}
 
 	public void setTr_id(int tr_id) {

@@ -31,7 +31,7 @@ public class DbConnection {
 
                    if(connection!=null){
 
-                       System.out.println("Connected to online database");
+                       System.out.println("Connected to database");
 
                    }else{
 
@@ -78,22 +78,46 @@ public class DbConnection {
 
 
    }
+   
+   
+   
+    public int manipulate(String query) {
 
-   public ResultSet fetchData(String query){
+        try {
 
-       try {
+            value = statement.executeUpdate(query);
 
-           resultSet = statement.executeQuery(query);
+            connection.close();
 
-   }catch (SQLException e){
+        } catch (SQLIntegrityConstraintViolationException ex) {
 
-           e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "These details already exist!");
 
-       }
+        } catch (SQLException e) {
 
-       return resultSet;
+            e.printStackTrace();
 
-   }
+        }
+
+        return value;
+
+    }
+
+    public ResultSet retrieve(String query) {
+
+        try {
+
+            resultSet = statement.executeQuery(query);
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+
+        }
+
+        return resultSet;
+
+    }
 
    public static void main(String[] args) {
 

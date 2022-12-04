@@ -14,6 +14,7 @@ import java.sql.*;
 import javax.swing.JFrame;
 import controller.TravellerController;
 import model.Traveller;
+import java.util.Random;
 
 
 /**
@@ -127,6 +128,11 @@ public class RegistrationScreen extends javax.swing.JFrame {
         jButton_SignIn.setBackground(new java.awt.Color(42, 134, 112));
         jButton_SignIn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton_SignIn.setText("Sign In");
+        jButton_SignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SignInActionPerformed(evt);
+            }
+        });
 
         jPasswordField_Password_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,22 +234,30 @@ public class RegistrationScreen extends javax.swing.JFrame {
         String password = String.valueOf(jPasswordField_Password_.getPassword());
         String confirmPassword = String.valueOf(jPasswordField_Confirm_Password_.getPassword());
         
-        Traveller t1 = new Traveller(2, "Prasanna", "asadkhan2071@gmail.com", "9823661010", "asdfg123","asdfg123");
+        
+        String num="";
+        Random ran=new Random();
+        for(int i=1;i<=6;i++){
+            
+            num=num+Integer.toString(ran.nextInt(10));
+            
+        }
+        int tr_id = Integer.parseInt(num);
+        
+        
+        Traveller t1 = new Traveller(tr_id, name, email, phoneNumber, password,confirmPassword);
         TravellerController sc = new TravellerController();
-        int insertedStudent = sc.insertStudent(t1);
+        int insertedTraveller = sc.insertTraveller(t1);
 
-        if (insertedStudent > 0) {
-            System.out.println("Student inserted");
+        if (insertedTraveller > 0) {
+            System.out.println("Traveller inserted");
         } else {
-            System.out.println("Failed to insert student");
+            System.out.println("Failed to insert traveller");
         }
         
         
-       
-	
-                
         
-        
+   
     }//GEN-LAST:event_jButton_Create_Account_ActionPerformed
 
     private void jTextField_Name_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_Name_ActionPerformed
@@ -253,6 +267,17 @@ public class RegistrationScreen extends javax.swing.JFrame {
     private void jPasswordField_Password_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField_Password_ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField_Password_ActionPerformed
+
+    private void jButton_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignInActionPerformed
+            // TODO add your handling code here:
+//            System.out.println("ButtonClicked"");
+
+            new loginpage();
+
+            
+            
+            
+    }//GEN-LAST:event_jButton_SignInActionPerformed
 
     /**
      * @param args the command line arguments

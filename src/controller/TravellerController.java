@@ -8,13 +8,14 @@ public class TravellerController{
 
     public int insertTraveller(Traveller traveller) {
         int id = traveller.getTr_id();
+        id++;
         String name = traveller.getTr_name();
         String email = traveller.getTr_email();
         String number = traveller.getTr_number();
         String pass = traveller.getTr_pass();
         String pass1 = traveller.getTr_pass1();
         String insertQuery = String.format(
-                "insert into tbl_student(tr_id,tr_name,tr_email,tr_number,tr_pass, tr_pass1) values(%d,'%s',%s,'%s',%s, %s)",
+                "insert into registration_table(tr_id,tr_name,tr_email,tr_number,tr_pass, tr_pass1) values(%d,'%s','%s','%s','%s', '%s')",
                 id,
                 name, email, number, pass, pass1);
         System.out.println(insertQuery);
