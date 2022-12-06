@@ -2,6 +2,10 @@ package controller;
 
 import database.DbConnection;
 import model.Traveller;
+import java.sql.*;
+import javax.swing.*;
+
+
 
 public class TravellerController{
     DbConnection dbConnection;
@@ -28,10 +32,22 @@ public class TravellerController{
         int id = traveller.getTr_id();
         String name = traveller.getTr_name();
         String updateQuery = String.format(
-                "update Registration_ set tr_name='%s' where tr_id = %d", name, id);
+                "update registration_table set tr_name='%s' where tr_id = %d", name, id);
         dbConnection = new DbConnection();
         int result = dbConnection.manipulate(updateQuery);
         return result;
     }
+    
+    public ResultSet retrieveTraveller(String email, String password){
+ 
+        String retrieveQuery = String.format(
+                "Select * from registration_table where tr_email='%s' and tr_pass='%s'",email,password);
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(retrieveQuery);
+        return result;
 
+       
+    }
+    
+    
 }

@@ -9,7 +9,7 @@ public class Traveller{
     private String tr_pass;
     private String tr_pass1;
 
-    // creation of public getter and setter --> for student ID
+    // creation of public getter and setter --> for id
 	public int getTr_id() {
 //               
 		return this.tr_id;
@@ -20,7 +20,7 @@ public class Traveller{
 		this.tr_id = tr_id;
 	}
 
-    // creation of public getter and setter --> for student Name
+    // creation of public getter and setter --> for name
 	public String getTr_name() {
 		return this.tr_name;
 	}
@@ -29,7 +29,7 @@ public class Traveller{
 		this.tr_name = tr_name;
 	}
 
-    // creation of public getter and setter --> for student Age
+    // creation of public getter and setter --> for email
 	public String getTr_email() {
 		return this.tr_email;
 	}
@@ -38,7 +38,7 @@ public class Traveller{
 		this.tr_email = tr_email;
 	}
 
-    // creation of public getter and setter --> for student Address
+    // creation of public getter and setter --> for number
 	public String getTr_number() {
 		return this.tr_number;
 	}
@@ -47,7 +47,7 @@ public class Traveller{
 		this.tr_number = tr_number;
 	}
 
-    // creation of public getter and setter --> for student Contact
+    // creation of public getter and setter --> for password
 	public String getTr_pass() {
 		return this.tr_pass;
 	}
@@ -75,6 +75,7 @@ public class Traveller{
         this.tr_pass = tr_pass;
         this.tr_pass1 = tr_pass1;
     }
-
+     
+    
 
 }
