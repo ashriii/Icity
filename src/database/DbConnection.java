@@ -1,68 +1,87 @@
 package database;
 
 
-
 import javax.swing.*;
-
 import java.sql.*;
 
-
-
 public class DbConnection {
+   public Connection connection;
+   
+   Statement statement;
 
-    public Connection connection;
+   ResultSet resultSet;
 
-    Statement statement;
+   int value;
 
-    ResultSet resultSet;
+   public DbConnection(){
 
-    int value;
-
-
-
-    public DbConnection(){
-
-        try {
-
-            String username = "sql12580135";
-
-            String password = "iXijQSnNa5";
-
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            connection = DriverManager.getConnection(
-
-                    "jdbc:mysql://sql12.freesqldatabase.com/sql12580135",username,password);
+       try {
 
 
+           String username = "root";
 
-                    if(connection!=null){
+           String password = "DHilbert*1920";
 
-                        System.out.println("Connected to online database");
+           Class.forName("com.mysql.cj.jdbc.Driver");
 
-                    }else{
 
-                        System.out.println("Error connecting to database");
+           connection = DriverManager.getConnection(
 
-                    }
+                   "jdbc:mysql://localhost:3306/traveller","root","DHilbert*1920");
 
-            statement = connection.createStatement();
+                   if(connection!=null){
 
-        }catch (Exception e){
+                       System.out.println("Connected to database");
 
-            e.printStackTrace();
+                   }else{
 
-        }
+                       System.out.println("Error connecting to database");
 
-    }
+                   }
+                   
+           statement = connection.createStatement();
+
+       }catch (Exception e){
+
+           e.printStackTrace();
 
 
 
-    // Via the use of sql query
+       }
+       
+   }
 
-    // insert, update and delete
 
-    public int executeQuery(String query){
+   // Via the use of sql query
+
+   // insert, update and delete
+
+   public int executeQuery(String query){
+
+       try {
+
+           value = statement.executeUpdate(query);
+
+           connection.close();
+
+       }catch (SQLIntegrityConstraintViolationException ex){
+
+           JOptionPane.showMessageDialog(null, "These details already exist!");
+
+       }catch (SQLException e){
+
+           e.printStackTrace();
+
+       }
+
+       return value;
+
+
+   }
+   
+   
+   
+    public int manipulate(String query) {
 
         try {
 
@@ -70,11 +89,11 @@ public class DbConnection {
 
             connection.close();
 
-        }catch (SQLIntegrityConstraintViolationException ex){
+        } catch (SQLIntegrityConstraintViolationException ex) {
 
             JOptionPane.showMessageDialog(null, "These details already exist!");
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
 
             e.printStackTrace();
 
@@ -84,15 +103,13 @@ public class DbConnection {
 
     }
 
-
-
-    public ResultSet fetchData(String query){
+    public ResultSet retrieve(String query) {
 
         try {
 
             resultSet = statement.executeQuery(query);
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
 
             e.printStackTrace();
 
@@ -102,12 +119,16 @@ public class DbConnection {
 
     }
 
+   public static void main(String[] args) {
 
+       new DbConnection();
 
-    public static void main(String[] args) {
+   }
 
-        new DbConnection();
+//    public PreparedStatement prepareStatement(String query) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 
-    }
+   
 
 }
