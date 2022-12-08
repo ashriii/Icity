@@ -197,7 +197,7 @@ public class loginpage extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 470, 340));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 470, 340));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 1.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 80));
@@ -258,10 +258,19 @@ public class loginpage extends javax.swing.JFrame {
         TravellerController tc = new TravellerController();
         ResultSet retrievedTraveller = tc.retrieveTraveller(email1,password1);
 
-         try {
+        try {
              while(retrievedTraveller.next()){
-                 String hel=retrievedTraveller.getString("tr_email");
-                 System.out.println(hel);
+                 
+                String a=retrievedTraveller.getString("tr_email");
+                boolean validEmail=email1.equals(a);
+                if(validEmail==true){
+                    this.dispose();
+                    UserDashBoard user1=new UserDashBoard();
+                    user1.setVisible(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Invalid email or password. Please enter valid data.");
+                }
                  
                  
              }

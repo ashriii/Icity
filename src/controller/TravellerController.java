@@ -41,7 +41,7 @@ public class TravellerController{
     public ResultSet retrieveTraveller(String email, String password){
  
         String retrieveQuery = String.format(
-                "Select * from registration_table where tr_email='%s' and tr_pass='%s'",email,password);
+                "SELECT * FROM registration_table WHERE tr_email='%s' AND tr_pass='%s'",email,password);
         dbConnection = new DbConnection();
         ResultSet result = dbConnection.retrieve(retrieveQuery);
         return result;

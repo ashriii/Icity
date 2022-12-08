@@ -27,7 +27,7 @@ public class DbConnection {
 
            connection = DriverManager.getConnection(
 
-                   "jdbc:mysql://sql6.freesqldatabase.com/sql6583077",username,password);
+                   "jdbc:mysql://sql6.freesqldatabase.com/sql6583077","sql6583077","n7HGzexgnj");
 
                    if(connection!=null){
 
@@ -130,5 +130,4 @@ public class DbConnection {
 //    }
 
    
-
 }
