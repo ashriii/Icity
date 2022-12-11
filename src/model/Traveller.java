@@ -7,7 +7,7 @@ public class Traveller{
     private String tr_email;
     private String tr_number;
     private String tr_pass;
-    private String tr_pass1;
+//    private String tr_pass1;
 
     // creation of public getter and setter --> for id
 	public int getTr_id() {
@@ -56,24 +56,24 @@ public class Traveller{
 		this.tr_pass = tr_pass;
 	}
         
-        public String getTr_pass1() {
-		return this.tr_pass1;
-	}
-
-	public void setTr_pass1(String tr_pass1) {
-		this.tr_pass1 = tr_pass1;
-	}
-
+//        public String getTr_pass1() {
+//		return this.tr_pass1;
+//	}
+//
+//	public void setTr_pass1(String tr_pass1) {
+//		this.tr_pass1 = tr_pass1;
+//	}
+//
 
 
     // creation of public constructor
-    public Traveller(int tr_id, String tr_name, String tr_email, String tr_number, String tr_pass, String tr_pass1){
+    public Traveller(int tr_id, String tr_name, String tr_email, String tr_number, String tr_pass){
         this.tr_id = tr_id;
         this.tr_name = tr_name;
         this.tr_email = tr_email;
         this.tr_number = tr_number;
         this.tr_pass = tr_pass;
-        this.tr_pass1 = tr_pass1;
+//        this.tr_pass1 = tr_pass1;
     }
      
     
