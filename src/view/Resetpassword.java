@@ -13,9 +13,7 @@ import javax.swing.*;
  */
 public class Resetpassword extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Resetpassword
-     */
+   
     
     public String email ="";
     public String number="";
