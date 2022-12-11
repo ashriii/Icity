@@ -47,7 +47,7 @@ public class Edit_Profile extends javax.swing.JFrame {
         jLabel6.setText("jLabel6");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 190, 60));
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         jLabel2.setText("Edit Profile");
@@ -147,7 +147,7 @@ public class Edit_Profile extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+        /* Set the Nimbus look and feel */ 
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
