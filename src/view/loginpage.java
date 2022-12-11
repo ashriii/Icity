@@ -218,6 +218,9 @@ public class loginpage extends javax.swing.JFrame {
     private void jButton_Forget_Password_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Forget_Password_ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(rootPane, "oops!! you forgot your password");
+        this.dispose();
+        forgetpassword res=new forgetpassword();
+        res.setVisible(true);
     }//GEN-LAST:event_jButton_Forget_Password_ActionPerformed
 
     private void jTextField_Sign_In_Email_FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField_Sign_In_Email_FocusGained
@@ -259,21 +262,15 @@ public class loginpage extends javax.swing.JFrame {
         ResultSet retrievedTraveller = tc.retrieveTraveller(email1,password1);
 
         try {
-             while(retrievedTraveller.next()){
-                 
-                String a=retrievedTraveller.getString("tr_email");
-                boolean validEmail=email1.equals(a);
-                if(validEmail==true){
-                    this.dispose();
-                    UserDashBoard user1=new UserDashBoard();
-                    user1.setVisible(true);
-                }
-                else{
-                    JOptionPane.showMessageDialog(null,"Invalid email or password. Please enter valid data.");
-                }
-                 
-                 
-             }
+             if(retrievedTraveller.next()){
+                
+                this.dispose();
+                UserDashBoard user1=new UserDashBoard();
+                user1.setVisible(true);
+            }
+            else{
+             JOptionPane.showMessageDialog(null,"Please enter valid email or password.");
+            }
          } catch (Exception ex) {
              Logger.getLogger(loginpage.class.getName()).log(Level.SEVERE, null, ex);
          }

@@ -33,10 +33,10 @@ public class Profilescreen extends javax.swing.JFrame {
         label3 = new java.awt.Label();
         label4 = new java.awt.Label();
         jLabel1 = new javax.swing.JLabel();
-        jLabel_Profile_Name_ = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel_ProfileName_ = new javax.swing.JLabel();
+        jLabel_Name_ = new javax.swing.JLabel();
+        jLabel_Number_ = new javax.swing.JLabel();
+        jLabel_Email_ = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -59,9 +59,9 @@ public class Profilescreen extends javax.swing.JFrame {
         label1.setText("Username:");
         jPanel1.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
 
-        label2.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        label2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         label2.setText("About");
-        jPanel1.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
+        jPanel1.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
         label3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label3.setText("Phone:");
@@ -74,21 +74,21 @@ public class Profilescreen extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/pro 1.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 80, 100));
 
-        jLabel_Profile_Name_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel_Profile_Name_.setText("Alex Thapa");
-        jPanel1.add(jLabel_Profile_Name_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 110, 20));
+        jLabel_ProfileName_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_ProfileName_.setText("Alex Thapa");
+        jPanel1.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 110, 20));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Alex Thapa");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 180, 20));
+        jLabel_Name_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_Name_.setText("Alex Thapa");
+        jPanel1.add(jLabel_Name_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 180, 20));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("9825631478");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 120, 20));
+        jLabel_Number_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_Number_.setText("9825631478");
+        jPanel1.add(jLabel_Number_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 120, 20));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("alex123@gmail.com");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 140, 20));
+        jLabel_Email_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_Email_.setText("alex123@gmail.com");
+        jPanel1.add(jLabel_Email_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 140, 20));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 470, 330));
 
@@ -150,10 +150,10 @@ public class Profilescreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel_Profile_Name_;
+    private javax.swing.JLabel jLabel_Email_;
+    private javax.swing.JLabel jLabel_Name_;
+    private javax.swing.JLabel jLabel_Number_;
+    private javax.swing.JLabel jLabel_ProfileName_;
     private javax.swing.JPanel jPanel1;
     private java.awt.Label label1;
     private java.awt.Label label2;

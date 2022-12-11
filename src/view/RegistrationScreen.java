@@ -236,7 +236,7 @@ public class RegistrationScreen extends javax.swing.JFrame {
         String email = jTextField_Email_.getText();
         String phoneNumber = jTextField_Phone_Number_.getText();
         String password = String.valueOf(jPasswordField_Password_.getPassword());
-        String confirmPassword = String.valueOf(jPasswordField_Confirm_Password_.getPassword());
+//        String confirmPassword = String.valueOf(jPasswordField_Confirm_Password_.getPassword());
         
         
         String num="";
@@ -249,7 +249,7 @@ public class RegistrationScreen extends javax.swing.JFrame {
         int tr_id = Integer.parseInt(num);
         
         
-        Traveller t1 = new Traveller(tr_id, name, email, phoneNumber, password,confirmPassword);
+        Traveller t1 = new Traveller(tr_id, name, email, phoneNumber, password);
         TravellerController tc = new TravellerController();
         int insertedTraveller = tc.insertTraveller(t1);
 
