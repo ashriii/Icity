@@ -23,8 +23,11 @@ public class Resetpassword extends javax.swing.JFrame {
     public Resetpassword(String email,String number) {
             this.email=email;
             this.number=number;
-        initComponents();
+            initComponents();
         
+    }
+    Resetpassword(){
+         initComponents();
     }
 
     /**
@@ -197,6 +200,9 @@ public class Resetpassword extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Resetpassword().setVisible(true);
+                
+//                Resetpassword res = new Resetpassword();
+//                res.setVisible(true);
             }
         });
     }
