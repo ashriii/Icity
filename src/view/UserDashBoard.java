@@ -89,7 +89,8 @@ public class UserDashBoard extends javax.swing.JFrame {
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"220", "Alex", "Studies", "Softwarica College", "Dillibazar", "9843210943", "Kathmandu"},
-                {"221", "Amy", "business", "NAN Company", "Suryabinayak", "9854362345", "Bhaktapur"}
+                {"221", "Amy", "business", "NAN Company", "Suryabinayak", "9854362345", "Bhaktapur"},
+                {"223", "jasmine", "studies", "british college", "kathmandu", "9843562534", "kathmandu"}
             },
             new String [] {
                 "ID", "Name", "Catagory", "Description", "Address ", "Contact", "City"
@@ -97,7 +98,7 @@ public class UserDashBoard extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 1063, 60));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 1063, 90));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N

@@ -139,7 +139,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="180" y="330" width="1063" height="60"/>
+          <AbsoluteConstraints x="180" y="330" width="1063" height="90"/>
         </Constraint>
       </Constraints>
 
@@ -151,34 +151,41 @@
               <Font name="Roboto" size="10" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="7" rowCount="2">
+              <Table columnCount="7" rowCount="3">
                 <Column editable="true" title="ID" type="java.lang.Object">
                   <Data value="220"/>
                   <Data value="221"/>
+                  <Data value="223"/>
                 </Column>
                 <Column editable="true" title="Name" type="java.lang.Object">
                   <Data value="Alex"/>
                   <Data value="Amy"/>
+                  <Data value="jasmine"/>
                 </Column>
                 <Column editable="true" title="Catagory" type="java.lang.Object">
                   <Data value="Studies"/>
                   <Data value="business"/>
+                  <Data value="studies"/>
                 </Column>
                 <Column editable="true" title="Description" type="java.lang.Object">
                   <Data value="Softwarica College"/>
                   <Data value="NAN Company"/>
+                  <Data value="british college"/>
                 </Column>
                 <Column editable="true" title="Address " type="java.lang.Object">
                   <Data value="Dillibazar"/>
                   <Data value="Suryabinayak"/>
+                  <Data value="kathmandu"/>
                 </Column>
                 <Column editable="true" title="Contact" type="java.lang.Object">
                   <Data value="9843210943"/>
                   <Data value="9854362345"/>
+                  <Data value="9843562534"/>
                 </Column>
                 <Column editable="true" title="City" type="java.lang.Object">
                   <Data value="Kathmandu"/>
                   <Data value="Bhaktapur"/>
+                  <Data value="kathmandu"/>
                 </Column>
               </Table>
             </Property>
