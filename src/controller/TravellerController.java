@@ -46,8 +46,8 @@ public class TravellerController{
         dbConnection = new DbConnection();
         ResultSet result = dbConnection.retrieve(retrieveQuery);
         return result;
-
     }
+    
     public ResultSet validTraveller(String email, String number){
  
         String validQuery = String.format(
@@ -57,6 +57,30 @@ public class TravellerController{
         return result;
 
     }
+    
+    public ResultSet fetchTraveller(int id){
+ 
+        String valQuery = String.format(
+                "SELECT * from registration_table where tr_id=%d",id);
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(valQuery);
+        return result;
+
+    }
+    
+    public int updateTravellerProfile(int id, String name2, String email2, String number2) {
+        String name =name2;
+        String email=email2;
+        String number=number2;
+        
+        String updateQuery = String.format(
+                "update registration_table set tr_name='%s', tr_number='%s',tr_email='%s' where tr_id= %d",name ,number,email,id);
+        dbConnection = new DbConnection();
+        int result = dbConnection.manipulate(updateQuery);
+        return result;
+    }
+    
+    
     
     
     

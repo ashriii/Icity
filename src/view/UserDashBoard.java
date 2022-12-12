@@ -9,13 +9,17 @@ package view;
  * @author user
  */
 public class UserDashBoard extends javax.swing.JFrame {
-
+    int id ;
+    int idUser;
     /**
      * Creates new form UserDashBoard
      */
-    public UserDashBoard() {
+    public UserDashBoard(int id1) {
+        this.id =id1;
         initComponents();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,7 +32,7 @@ public class UserDashBoard extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButton_Profile_ = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         label1 = new java.awt.Label();
@@ -51,16 +55,16 @@ public class UserDashBoard extends javax.swing.JFrame {
         jButton4.setText("Logout");
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 20, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Profile");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Profile_.setBackground(new java.awt.Color(0, 0, 0));
+        jButton_Profile_.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        jButton_Profile_.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_Profile_.setText("Profile");
+        jButton_Profile_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton_Profile_ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, -1, -1));
+        getContentPane().add(jButton_Profile_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
@@ -104,12 +108,16 @@ public class UserDashBoard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:s
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton_Profile_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Profile_ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        this.dispose();
+        new Profilescreen(id).setVisible(true);
+        
+        
+    }//GEN-LAST:event_jButton_Profile_ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,7 +149,7 @@ public class UserDashBoard extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UserDashBoard().setVisible(true);
+                new UserDashBoard(1).setVisible(true);
             }
         });
     }
@@ -149,8 +157,8 @@ public class UserDashBoard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton_Profile_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

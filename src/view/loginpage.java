@@ -22,6 +22,7 @@ public class loginpage extends javax.swing.JFrame {
      */int a=0;
      int b=0;
     public loginpage() {
+        
         initComponents();
          getContentPane().requestFocusInWindow();
     }
@@ -265,7 +266,7 @@ public class loginpage extends javax.swing.JFrame {
              if(retrievedTraveller.next()){
                 
                 this.dispose();
-                UserDashBoard user1=new UserDashBoard();
+                UserDashBoard user1=new UserDashBoard(retrievedTraveller.getInt("tr_id"));
                 user1.setVisible(true);
             }
             else{
@@ -274,11 +275,7 @@ public class loginpage extends javax.swing.JFrame {
          } catch (Exception ex) {
              Logger.getLogger(loginpage.class.getName()).log(Level.SEVERE, null, ex);
          }
-             
-
-
-
-        
+                     
         
         
     }//GEN-LAST:event_jButton_LogInActionPerformed

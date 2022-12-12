@@ -255,9 +255,35 @@ public class RegistrationScreen extends javax.swing.JFrame {
 
         if (insertedTraveller > 0) {
             System.out.println("Traveller inserted");
+            this.dispose();
+            new UserDashBoard(tr_id).setVisible(true);
+            
+            
+        String email1 = jTextField_Email_.getText();
+        String password1=String.valueOf(jPasswordField_Password_.getPassword());
+        
+        TravellerController tt = new TravellerController();
+        ResultSet retrievedTraveller = tt.retrieveTraveller(email1,password1);
+
+        try {
+             if(retrievedTraveller.next()){
+                
+                this.dispose();
+                UserDashBoard user1=new UserDashBoard(retrievedTraveller.getInt("tr_id"));
+                user1.setVisible(true);
+            }
+            else{
+             JOptionPane.showMessageDialog(null,"Please enter valid email or password.");
+            }
+         } catch (Exception ex) {
+             java.util.logging.Logger.getLogger(loginpage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+         }
+             
+            
         } else {
             System.out.println("Failed to insert traveller");
         }
+        
         
         
         
