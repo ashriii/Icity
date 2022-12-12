@@ -90,7 +90,8 @@ public class UserDashBoard extends javax.swing.JFrame {
             new Object [][] {
                 {"220", "Alex", "Studies", "Softwarica College", "Dillibazar", "9843210943", "Kathmandu"},
                 {"221", "Amy", "business", "NAN Company", "Suryabinayak", "9854362345", "Bhaktapur"},
-                {"223", "jasmine", "studies", "british college", "kathmandu", "9843562534", "kathmandu"}
+                {"223", "jasmine", "studies", "british college", "kathmandu", "9843562534", "kathmandu"},
+                {"224", "katie", "studies ", "khowpa", "decocha", "9845123476", "Bhaktapur"}
             },
             new String [] {
                 "ID", "Name", "Catagory", "Description", "Address ", "Contact", "City"
