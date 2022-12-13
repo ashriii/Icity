@@ -32,7 +32,7 @@ public class Profilescreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanel_BackButton_ = new javax.swing.JPanel();
         jButton_Edit_ = new javax.swing.JButton();
         label1 = new java.awt.Label();
         label2 = new java.awt.Label();
@@ -44,14 +44,14 @@ public class Profilescreen extends javax.swing.JFrame {
         jLabel_Number_ = new javax.swing.JLabel();
         jLabel_Email_ = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButton_Back_ = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel_BackButton_.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel_BackButton_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_Edit_.setBackground(new java.awt.Color(153, 153, 153));
         jButton_Edit_.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -61,30 +61,30 @@ public class Profilescreen extends javax.swing.JFrame {
                 jButton_Edit_ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton_Edit_, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+        jPanel_BackButton_.add(jButton_Edit_, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
 
         label1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label1.setText("Username:");
-        jPanel1.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
+        jPanel_BackButton_.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
 
         label2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         label2.setText("About");
-        jPanel1.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+        jPanel_BackButton_.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
         label3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label3.setText("Phone:");
-        jPanel1.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 60, 20));
+        jPanel_BackButton_.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 60, 20));
 
         label4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label4.setText("E-Mail:");
-        jPanel1.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        jPanel_BackButton_.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/pro 1.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 80, 100));
+        jPanel_BackButton_.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 80, 100));
 
         jLabel_ProfileName_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_ProfileName_.setText("Alex Thapa");
-        jPanel1.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 110, 20));
+        jPanel_BackButton_.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 110, 20));
 
         jLabel_Name_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TravellerController t1 = new TravellerController();
@@ -108,30 +108,37 @@ public class Profilescreen extends javax.swing.JFrame {
                 jLabel_Email_.setText(email1);
 
 
-
             }}
             catch(Exception e){
                 e.printStackTrace();
 
             }
-            jPanel1.add(jLabel_Name_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 180, 20));
+            jPanel_BackButton_.add(jLabel_Name_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 180, 20));
 
             jLabel_Number_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            jPanel1.add(jLabel_Number_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 120, 20));
+            jLabel_Number_.setText("9825631478");
+            jPanel_BackButton_.add(jLabel_Number_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 120, 20));
 
             jLabel_Email_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            jPanel1.add(jLabel_Email_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 200, 20));
+            jLabel_Email_.setText("alex123@gmail.com");
+            jPanel_BackButton_.add(jLabel_Email_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 200, 20));
 
-            getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 470, 330));
+            getContentPane().add(jPanel_BackButton_, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 470, 330));
 
             jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
             getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 60));
 
-            jButton1.setBackground(new java.awt.Color(153, 153, 153));
-            jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-            jButton1.setText("Back");
-            getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 90, 30));
+            jButton_Back_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Back_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Back_.setText("Back");
+            jButton_Back_.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_Back_ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton_Back_, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 90, 30));
 
+            jLabel2.setBackground(new java.awt.Color(0, 102, 102));
             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -20, -1, -1));
 
@@ -141,11 +148,17 @@ public class Profilescreen extends javax.swing.JFrame {
     private void jButton_Edit_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        Edit_Profile ed= new Edit_Profile(1);
+        Edit_Profile ed= new Edit_Profile(userId);
         ed.setVisible(true);
         
     }//GEN-LAST:event_jButton_Edit_ActionPerformed
 
+    private void jButton_Back_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Back_ActionPerformed
+        // TODO add your handling code here:
+        this.hide();
+        new UserDashBoard(userId).setVisible(true);
+    }//GEN-LAST:event_jButton_Back_ActionPerformed
+ 
     /**
      * @param args the command line arguments
      */
@@ -183,7 +196,7 @@ public class Profilescreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton_Back_;
     private javax.swing.JButton jButton_Edit_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -192,7 +205,7 @@ public class Profilescreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_Name_;
     private javax.swing.JLabel jLabel_Number_;
     private javax.swing.JLabel jLabel_ProfileName_;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel_BackButton_;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;

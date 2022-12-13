@@ -269,6 +269,11 @@ public class loginpage extends javax.swing.JFrame {
                 UserDashBoard user1=new UserDashBoard(retrievedTraveller.getInt("tr_id"));
                 user1.setVisible(true);
             }
+             else if(email1.equals("Admin@gmail.com") && password1.equals("password")){
+                 this.dispose();
+//                 new 
+             
+             }
             else{
              JOptionPane.showMessageDialog(null,"Please enter valid email or password.");
             }
