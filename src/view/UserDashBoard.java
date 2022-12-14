@@ -58,7 +58,7 @@ public class UserDashBoard extends javax.swing.JFrame {
         ResultSet rs=t1.fetchTraveller(id);
         try{
             while(rs.next()){
-                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name"));
+                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name"+"!"));
                 jLabel_Welcome_.setAlignment(1);;
 
 
