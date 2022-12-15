@@ -58,7 +58,7 @@ public class UserDashBoard extends javax.swing.JFrame {
         ResultSet rs=t1.fetchTraveller(id);
         try{
             while(rs.next()){
-                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name"+"!"));
+                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name")+"!");
                 jLabel_Welcome_.setAlignment(1);;
 
 
@@ -90,7 +90,6 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton4.setActionCommand("");
             getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 20, 110, -1));
 
-<<<<<<< HEAD
             jButton_Profile_.setBackground(new java.awt.Color(0, 102, 102));
             jButton_Profile_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
             jButton_Profile_.setForeground(new java.awt.Color(255, 255, 255));
@@ -105,24 +104,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             jLabel1.setBackground(new java.awt.Color(102, 255, 255));
             jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
-=======
-        jTable1.setFont(new java.awt.Font("Roboto", 1, 10)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"220", "Alex", "Studies", "Softwarica College", "Dillibazar", "9843210943", "Kathmandu"},
-                {"221", "Amy", "business", "NAN Company", "Suryabinayak", "9854362345", "Bhaktapur"},
-                {"223", "jasmine", "studies", "british college", "kathmandu", "9843562534", "kathmandu"},
-                {"224", "katie", "studies ", "khowpa", "decocha", "9845123476", "Bhaktapur"}
-            },
-            new String [] {
-                "ID", "Name", "Catagory", "Description", "Address ", "Contact", "City"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 1063, 90));
->>>>>>> 97524cebad03de60cb83f88d12a52cf63e0d631f
-
+        
             jButton3.setBackground(new java.awt.Color(153, 153, 153));
             jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton3.setText("Markets");

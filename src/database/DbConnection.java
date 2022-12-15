@@ -20,14 +20,14 @@ public class DbConnection {
 
            String username = "root";
 
-           String password = "r00tp@ss";
+           String password = "DHilbert*1920";
 
            Class.forName("com.mysql.cj.jdbc.Driver");
 
 
            connection = DriverManager.getConnection(
 
-                   "jdbc:mysql://localhost:3306/traveller","root","DHilbert*1920");
+                   "jdbc:mysql://localhost:3306/traveller",username,password);
 
                    if(connection!=null){
 

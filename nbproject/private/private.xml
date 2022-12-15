@@ -3,20 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/forgetpassword.java</file>
-            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/SelectCatagory.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/Edit_Profile.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/RegistrationScreen.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/UserDashBoard.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/Profilescreen.java</file>
-            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/loginpage.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Office.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/controller/TravellerController.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/database/DbConnection.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Market.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/adminboard.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Park.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/forgetpassword.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Tourist_area.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/HospitalController/java.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/SelectCatagory.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Traveller.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/School.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/loginpage.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/ReviewPage.java</file>
-=======
-            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/adminboard.java</file>
->>>>>>> 97524cebad03de60cb83f88d12a52cf63e0d631f
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Hospital.java</file>
         </group>
     </open-files>
 </project-private>
