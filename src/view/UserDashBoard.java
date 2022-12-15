@@ -101,6 +101,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             });
             getContentPane().add(jButton_Profile_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 110, 30));
 
+<<<<<<< HEAD
             jLabel1.setBackground(new java.awt.Color(102, 255, 255));
             jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
@@ -109,6 +110,9 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton3.setText("Markets");
             getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
+=======
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 1063, 80));
+>>>>>>> paribesh
 
             jButton5.setBackground(new java.awt.Color(153, 153, 153));
             jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
