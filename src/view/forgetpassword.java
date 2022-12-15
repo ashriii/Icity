@@ -54,6 +54,7 @@ public class forgetpassword extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Email");
 
+        jTextField_Forget_Password_Number_.setFont(new java.awt.Font("Yu Gothic UI", 1, 12)); // NOI18N
         jTextField_Forget_Password_Number_.setBorder(null);
         jTextField_Forget_Password_Number_.setOpaque(true);
 
@@ -70,6 +71,7 @@ public class forgetpassword extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Number");
 
+        jTextField_Forget_Password_Email_.setFont(new java.awt.Font("Yu Gothic UI", 1, 12)); // NOI18N
         jTextField_Forget_Password_Email_.setBorder(null);
         jTextField_Forget_Password_Email_.setOpaque(true);
 

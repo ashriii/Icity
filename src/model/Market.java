@@ -54,7 +54,7 @@ public class Market {
 	}
 
     // creation of public getter and setter --> for contact
-	public String getTourist_area_contact() {
+	public String getMarket_contact() {
 		return this.market_contact;
 	}
 

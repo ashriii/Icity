@@ -18,7 +18,7 @@ import model.Traveller;
 public class loginpage extends javax.swing.JFrame {
 
     /**
-     * Creates new form loginpage
+     * Creates new form loginPage
      */int a=0;
      int b=0;
     public loginpage() {
@@ -63,7 +63,7 @@ public class loginpage extends javax.swing.JFrame {
         jLabel3.setText("Sign in to find new solution for destination ");
 
         jTextField_Sign_In_Email_.setBackground(new java.awt.Color(204, 0, 255));
-        jTextField_Sign_In_Email_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextField_Sign_In_Email_.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
         jTextField_Sign_In_Email_.setForeground(new java.awt.Color(255, 255, 255));
         jTextField_Sign_In_Email_.setFocusCycleRoot(true);
         jTextField_Sign_In_Email_.setHighlighter(null);
@@ -269,7 +269,7 @@ public class loginpage extends javax.swing.JFrame {
                 UserDashBoard user1=new UserDashBoard(retrievedTraveller.getInt("tr_id"));
                 user1.setVisible(true);
             }
-             else if(email1.equals("Admin@gmail.com") && password1.equals("password")){
+             else if(email1.equals("admin@gmail.com") && password1.equals("pass345")){
                  this.dispose();
 //                 new 
              
