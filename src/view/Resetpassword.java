@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -13,6 +13,16 @@ import javax.swing.*;
  */
 public class Resetpassword extends javax.swing.JFrame {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    /**
+     * Creates ne w form Resetpassword
+     */
+    public Resetpassword() {
+        initComponents();
+=======
+=======
+>>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
    
     
     public String email ="";
@@ -26,6 +36,10 @@ public class Resetpassword extends javax.swing.JFrame {
     }
     Resetpassword(){
          initComponents();
+<<<<<<< HEAD
+>>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
+=======
+>>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
     }
 
     /**

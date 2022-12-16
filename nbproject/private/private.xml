@@ -3,6 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/D:/test/Icity/src/view/SelectCity.java</file>
+            <file>file:/D:/test/Icity/src/view/SelectCatagory.java</file>
+            <file>file:/D:/test/Icity/src/view/Resetpassword.java</file>
+            <file>file:/D:/test/Icity/src/view/Homepage.java</file>
+=======
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/forgetpassword.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/Resetpassword.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Traveller.java</file>
@@ -11,8 +17,16 @@
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/UserDashBoard.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/controller/MarketController.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/loginpage.java</file>
+<<<<<<< HEAD
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/controller/HospitalController.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Hospital.java</file>
+=======
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/adminboard.java</file>
+<<<<<<< HEAD
+>>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
+=======
+>>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
+>>>>>>> b187fc9b0b9b9b860672bc4d7162b51132d3565a
         </group>
     </open-files>
 </project-private>

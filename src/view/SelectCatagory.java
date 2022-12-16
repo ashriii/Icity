@@ -39,12 +39,19 @@ public class SelectCatagory extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 360, 70));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+<<<<<<< HEAD
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "School", "Hospital", "Offices", "Tourist Area", "Parks", "Markets" }));
+=======
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Education", "Business", "Tourism" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+>>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
+=======
+>>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 300, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
