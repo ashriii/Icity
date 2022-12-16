@@ -18,10 +18,11 @@ import model.Traveller;
 public class loginpage extends javax.swing.JFrame {
 
     /**
-     * Creates new form loginpage
+     * Creates new form loginPage
      */int a=0;
      int b=0;
     public loginpage() {
+        
         initComponents();
          getContentPane().requestFocusInWindow();
     }
@@ -62,7 +63,7 @@ public class loginpage extends javax.swing.JFrame {
         jLabel3.setText("Sign in to find new solution for destination ");
 
         jTextField_Sign_In_Email_.setBackground(new java.awt.Color(204, 0, 255));
-        jTextField_Sign_In_Email_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTextField_Sign_In_Email_.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
         jTextField_Sign_In_Email_.setForeground(new java.awt.Color(255, 255, 255));
         jTextField_Sign_In_Email_.setFocusCycleRoot(true);
         jTextField_Sign_In_Email_.setHighlighter(null);
@@ -218,6 +219,9 @@ public class loginpage extends javax.swing.JFrame {
     private void jButton_Forget_Password_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Forget_Password_ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(rootPane, "oops!! you forgot your password");
+        this.dispose();
+        forgetpassword res=new forgetpassword();
+        res.setVisible(true);
     }//GEN-LAST:event_jButton_Forget_Password_ActionPerformed
 
     private void jTextField_Sign_In_Email_FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField_Sign_In_Email_FocusGained
@@ -259,29 +263,24 @@ public class loginpage extends javax.swing.JFrame {
         ResultSet retrievedTraveller = tc.retrieveTraveller(email1,password1);
 
         try {
-             while(retrievedTraveller.next()){
-                 
-                String a=retrievedTraveller.getString("tr_email");
-                boolean validEmail=email1.equals(a);
-                if(validEmail==true){
-                    this.dispose();
-                    UserDashBoard user1=new UserDashBoard();
-                    user1.setVisible(true);
-                }
-                else{
-                    JOptionPane.showMessageDialog(null,"Invalid email or password. Please enter valid data.");
-                }
-                 
-                 
+             if(retrievedTraveller.next()){
+                
+                this.dispose();
+                UserDashBoard user1=new UserDashBoard(retrievedTraveller.getInt("tr_id"));
+                user1.setVisible(true);
+            }
+             else if(email1.equals("admin@gmail.com") && password1.equals("pass345")){
+                 this.dispose();
+//                 new 
+             
              }
+            else{
+             JOptionPane.showMessageDialog(null,"Please enter valid email or password.");
+            }
          } catch (Exception ex) {
              Logger.getLogger(loginpage.class.getName()).log(Level.SEVERE, null, ex);
          }
-             
-
-
-
-        
+                     
         
         
     }//GEN-LAST:event_jButton_LogInActionPerformed

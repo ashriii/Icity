@@ -3,19 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-
+import controller.TravellerController;
+import java.sql.*;
+import java.awt.*;
 /**
  *
  * @author user
  */
 public class UserDashBoard extends javax.swing.JFrame {
-
+    int id ;
+    int idUser;
     /**
      * Creates new form UserDashBoard
      */
-    public UserDashBoard() {
+    public UserDashBoard(int id1) {
+        this.id =id1;
         initComponents();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,90 +32,130 @@ public class UserDashBoard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel_Welcome_ = new java.awt.Label();
         jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton_Profile_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        label1 = new java.awt.Label();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
         setFocusTraversalPolicyProvider(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 70));
+        jLabel_Welcome_.setBackground(new java.awt.Color(204,204,204));
+        jLabel_Welcome_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jLabel_Welcome_.setText("Welcome User");
+        TravellerController t1 = new TravellerController();
+        ResultSet rs=t1.fetchTraveller(id);
+        try{
+            while(rs.next()){
+                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name")+"!");
+                jLabel_Welcome_.setAlignment(1);;
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Logout");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 20, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Profile");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+            }}
+            catch(Exception e){
+                e.printStackTrace();
             }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, -1, -1));
+            getContentPane().add(jLabel_Welcome_, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 250, 40));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Home");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, -1, -1));
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
+            jLabel2.setText("jLabel2");
+            getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 70));
 
-        jLabel1.setBackground(new java.awt.Color(102, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 260));
+            jButton2.setBackground(new java.awt.Color(0, 102, 102));
+            jButton2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+            jButton2.setForeground(new java.awt.Color(255, 255, 255));
+            jButton2.setText("Admin");
+            jButton2.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton2ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
 
-        label1.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        label1.setText("Welcome User");
-        getContentPane().add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 250, -1));
+            jButton4.setBackground(new java.awt.Color(0, 102, 102));
+            jButton4.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+            jButton4.setForeground(new java.awt.Color(255, 255, 255));
+            jButton4.setText("Log Out");
+            jButton4.setActionCommand("");
+            getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 20, 110, -1));
 
-        jTable1.setFont(new java.awt.Font("Roboto", 1, 10)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"220", "Alex", "Studies", "Softwarica College", "Dillibazar", "9843210943", "Kathmandu"},
-                {"221", "Amy", "business", "NAN Company", "Suryabinayak", "9854362345", "Bhaktapur"}
-            },
-            new String [] {
-                "ID", "Name", "Catagory", "Description", "Address ", "Contact", "City"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+            jButton_Profile_.setBackground(new java.awt.Color(0, 102, 102));
+            jButton_Profile_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+            jButton_Profile_.setForeground(new java.awt.Color(255, 255, 255));
+            jButton_Profile_.setText("Profile");
+            jButton_Profile_.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_Profile_ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton_Profile_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 110, 30));
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 1063, 60));
+<<<<<<< HEAD
+            jLabel1.setBackground(new java.awt.Color(102, 255, 255));
+            jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
+            getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
+        
+            jButton3.setBackground(new java.awt.Color(153, 153, 153));
+            jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton3.setText("Markets");
+            getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
+=======
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 1063, 80));
+>>>>>>> paribesh
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        jButton1.setText("Search");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 130, -1));
+            jButton5.setBackground(new java.awt.Color(153, 153, 153));
+            jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton5.setText("School");
+            getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 120, 30));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+            jButton6.setBackground(new java.awt.Color(153, 153, 153));
+            jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton6.setText("Hospital");
+            getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 120, 30));
+
+            jButton7.setBackground(new java.awt.Color(153, 153, 153));
+            jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton7.setText("Offices");
+            getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, 30));
+
+            jButton8.setBackground(new java.awt.Color(153, 153, 153));
+            jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton8.setText("Tourist Area");
+            getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
+
+            jButton9.setBackground(new java.awt.Color(153, 153, 153));
+            jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton9.setText("Parks");
+            getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
+
+            jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+            getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 1270, 290));
+
+            pack();
+        }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:s
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton_Profile_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Profile_ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        this.dispose();
+        new Profilescreen(id).setVisible(true);
+        
+        
+    }//GEN-LAST:event_jButton_Profile_ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,20 +187,24 @@ public class UserDashBoard extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UserDashBoard().setVisible(true);
+                new UserDashBoard(1).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButton_Profile_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private java.awt.Label label1;
+    private java.awt.Label jLabel_Welcome_;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
