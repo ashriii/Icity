@@ -48,6 +48,9 @@ public class SelectCatagory extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+>>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
+=======
 >>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 300, 60));
 
