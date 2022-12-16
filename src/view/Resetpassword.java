@@ -153,17 +153,17 @@ public class Resetpassword extends javax.swing.JFrame {
         String newPassword =jTextField_New_Password_.getText();
         String newConfirmPassword =jTextField_Confirm_Password_.getText();
         
-//        if(newPassword==newConfirmPassword){
+        if(newPassword==newConfirmPassword){
             TravellerController ut= new TravellerController();
             ut.updateTraveller(email, number, newPassword );
             JOptionPane.showMessageDialog(null,"Password Updated");
 
         
-//        }
-//        else{
-//             JOptionPane.showMessageDialog(null,"Password doesn't match.");
-//        
-//        }
+        }
+        else{
+             JOptionPane.showMessageDialog(null,"Password doesn't match.");
+        
+        }
 
     }//GEN-LAST:event_jButton_Submit_ActionPerformed
 

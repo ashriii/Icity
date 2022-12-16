@@ -271,8 +271,7 @@ public class loginpage extends javax.swing.JFrame {
             }
              else if(email1.equals("admin@gmail.com") && password1.equals("pass345")){
                  this.dispose();
-//                 new 
-             
+                 new adminboard().setVisible(true);             
              }
             else{
              JOptionPane.showMessageDialog(null,"Please enter valid email or password.");
