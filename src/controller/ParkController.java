@@ -4,6 +4,7 @@
  */
 package controller;
 import database.DbConnection;
+import java.sql.ResultSet;
 import model.Park;
 
 /**
@@ -55,6 +56,14 @@ public int deletePark(int id1){
     return result;
 
 }
+public ResultSet fetchPark(){
+ 
+        String retrieveQuery = String.format(
+                "SELECT * FROM park");
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(retrieveQuery);
+        return result;
+    }
 
 
     

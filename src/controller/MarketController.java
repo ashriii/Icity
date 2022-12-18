@@ -5,6 +5,7 @@
 package controller;
 import model.Market;
 import database.DbConnection;
+import java.sql.ResultSet;
 
 /**
  *
@@ -54,6 +55,15 @@ public int deleteMarket(int id1){
     return result;
 
 }
+
+public ResultSet fetchMarket(){
+ 
+        String retrieveQuery = String.format(
+                "SELECT * FROM market");
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(retrieveQuery);
+        return result;
+    }
 
 
     

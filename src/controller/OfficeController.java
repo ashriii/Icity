@@ -6,6 +6,7 @@ package controller;
 import model.Office;
 
 import database.DbConnection;
+import java.sql.ResultSet;
 
 /**
  *
@@ -55,6 +56,15 @@ public int deleteOffice(int id1){
     return result;
 
 }
+
+public ResultSet fetchOffice(){
+ 
+        String retrieveQuery = String.format(
+                "SELECT * FROM office");
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(retrieveQuery);
+        return result;
+    }
 
 
     

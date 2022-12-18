@@ -4,6 +4,7 @@
  */
 package controller;
 import database.DbConnection;
+import java.sql.ResultSet;
 import model.Tourist_area;
 
 
@@ -31,6 +32,8 @@ public class TouristAreaController {
     int result = dbConnection.manipulate(insertQuery);
     return result;
 }
+    
+    
 
 
 
@@ -56,6 +59,15 @@ public int deleteTouristArea(int id1){
     return result;
 
 }
+
+public ResultSet fetchTouristArea(){
+ 
+        String retrieveQuery = String.format(
+                "SELECT * FROM tourist_area");
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(retrieveQuery);
+        return result;
+    }
 
 
     

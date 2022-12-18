@@ -54,5 +54,14 @@ public int deleteHospital(int id1){
     return result;
 
 }
+
+public ResultSet fetchHospital(){
+ 
+        String retrieveQuery = String.format(
+                "SELECT * FROM hospital");
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(retrieveQuery);
+        return result;
+    }
     
 }

@@ -7,8 +7,11 @@ import controller.TravellerController;
 import java.sql.*;
 
 import javax.swing.JOptionPane;
-
+import controller.SchoolController;
 import java.awt.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author user
@@ -43,12 +46,14 @@ public class UserDashBoard extends javax.swing.JFrame {
         jButton_Profile_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButton_School_ = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable_Data_ = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
@@ -58,7 +63,6 @@ public class UserDashBoard extends javax.swing.JFrame {
         jLabel_Welcome_.setBackground(new java.awt.Color(204, 255, 255));
         jLabel_Welcome_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel_Welcome_.setText("Welcome User");
-        jLabel_Welcome_.setAlignment(1);
         TravellerController t1 = new TravellerController();
         ResultSet rs=t1.fetchTraveller(id);
         try{
@@ -69,28 +73,21 @@ public class UserDashBoard extends javax.swing.JFrame {
                 e.printStackTrace();
             }
             getContentPane().add(jLabel_Welcome_, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 250, 40));
+
+            //Admin login to show admin button
+
             if(id==arrayId[0]){
             jButton_Profile_1.setBackground(new java.awt.Color(0, 102, 102));
             jButton_Profile_1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
             jButton_Profile_1.setForeground(new java.awt.Color(255, 255, 255));
             jButton_Profile_1.setText("Admin");
-            getContentPane().add(jButton_Profile_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
-
-
             jButton_Profile_1.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     jButton_Profile_1ActionPerformed(evt);
                 }
             });
+            getContentPane().add(jButton_Profile_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
         }
-            else{
-                System.out.println("Not an admin");
-
-            }
-
-            
-        
-
             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
             jLabel2.setText("jLabel2");
             getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 70));
@@ -105,7 +102,7 @@ public class UserDashBoard extends javax.swing.JFrame {
                     jButton_LogOut_ActionPerformed(evt);
                 }
             });
-            getContentPane().add(jButton_LogOut_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 20, 110, -1));
+            getContentPane().add(jButton_LogOut_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 20, 110, 30));
 
             jButton_Profile_.setBackground(new java.awt.Color(0, 102, 102));
             jButton_Profile_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -127,10 +124,15 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton3.setText("Markets");
             getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
 
-            jButton5.setBackground(new java.awt.Color(153, 153, 153));
-            jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            jButton5.setText("School");
-            getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 120, 30));
+            jButton_School_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_School_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_School_.setText("School");
+            jButton_School_.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_School_ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton_School_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 120, 30));
 
             jButton6.setBackground(new java.awt.Color(153, 153, 153));
             jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -152,8 +154,21 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton9.setText("Parks");
             getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
 
-            jPanel2.setBackground(new java.awt.Color(0, 102, 102));
-            getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 1270, 310));
+            jTable_Data_.setBackground(new java.awt.Color(0, 153, 102));
+            jTable_Data_.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [][] {
+
+                },
+                new String [] {
+
+                }
+            ));
+            jScrollPane2.setViewportView(jTable_Data_);
+
+            getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 800, 300));
+
+            jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+            getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 1270, 310));
 
             pack();
         }// </editor-fold>//GEN-END:initComponents
@@ -176,6 +191,34 @@ public class UserDashBoard extends javax.swing.JFrame {
         this.dispose();
         new adminboard().setVisible(true);
     }//GEN-LAST:event_jButton_Profile_1ActionPerformed
+
+    private void jButton_School_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_School_ActionPerformed
+        SchoolController sc =new SchoolController();
+        ResultSet rs = sc.fetchSchool();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=1;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String id, name,description,address,contact;            
+                   id=rs.getString(1);
+                   name=rs.getString(2);
+                   description=rs.getString(3);
+                   address=rs.getString(4);
+                   contact=rs.getString(5);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton_School_ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -214,7 +257,6 @@ public class UserDashBoard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -222,9 +264,12 @@ public class UserDashBoard extends javax.swing.JFrame {
     private javax.swing.JButton jButton_LogOut_;
     private javax.swing.JButton jButton_Profile_;
     private javax.swing.JButton jButton_Profile_1;
+    private javax.swing.JButton jButton_School_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private java.awt.Label jLabel_Welcome_;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable_Data_;
     // End of variables declaration//GEN-END:variables
 }
