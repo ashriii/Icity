@@ -49,12 +49,12 @@ public class Homepage extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setText("Admin");
+        jButton1.setText("ADMIN");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 130, 40));
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton2.setText("User");
+        jButton2.setText("USER");
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 130, 40));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Central-i-city-1-1280x720.jpg"))); // NOI18N
