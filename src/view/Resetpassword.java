@@ -142,13 +142,13 @@ public class Resetpassword extends javax.swing.JFrame {
         jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 60));
 
         BGphoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Central-i-city-1-1280x720222.jpg"))); // NOI18N
-        jPanel1.add(BGphoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 840, 630));
+        jPanel1.add(BGphoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 870, 630));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

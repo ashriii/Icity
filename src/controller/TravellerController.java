@@ -19,7 +19,7 @@ public class TravellerController{
         String pass = traveller.getTr_pass();
 //        String pass1 = traveller.getTr_pass1();
         String insertQuery = String.format(
-                "insert into registration_table(tr_id,tr_name,tr_email,tr_number,tr_pass) values(%d,'%s','%s','%s','%s')",
+                "insert into registration_table(tr_id,tr_name,tr_email,tr_number,tr_pass) values(%d,'%s','%s','%s','%s')", //insert the query for the table
                 id,
                 name, email, number, pass);
         System.out.println(insertQuery);
