@@ -60,6 +60,7 @@ public class adminboard extends javax.swing.JFrame {
         jButton_Delete_ = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jTextField_Category_ = new javax.swing.JTextField();
+        jButton_Back_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -130,6 +131,15 @@ public class adminboard extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Roboto", 1, 18));
         jLabel8.setText("Category:");
 
+        jButton_Back_.setBackground(new java.awt.Color(0, 102, 102));
+        jButton_Back_.setFont(new java.awt.Font("Roboto", 1, 14));
+        jButton_Back_.setText("Back");
+        jButton_Back_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Back_ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -147,7 +157,8 @@ public class adminboard extends javax.swing.JFrame {
                             .addComponent(jLabel5)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(jButton_Add_, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton_Add_, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton_Back_, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -172,8 +183,11 @@ public class adminboard extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton_Back_, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
@@ -426,6 +440,12 @@ public class adminboard extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton_Delete_ActionPerformed
 
+    private void jButton_Back_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Back_ActionPerformed
+        this.dispose();
+        new UserDashBoard(1).setVisible(true);
+        
+    }//GEN-LAST:event_jButton_Back_ActionPerformed
+
     private void jButton_Add_ActionPerformed(java.awt.event.ActionEvent evt) {
         
         String category=jTextField_Category_.getText();
@@ -554,6 +574,7 @@ public class adminboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_Add_;
+    private javax.swing.JButton jButton_Back_;
     private javax.swing.JButton jButton_Delete_;
     private javax.swing.JButton jButton_Update_;
     private javax.swing.JLabel jLabel1;

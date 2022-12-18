@@ -57,6 +57,15 @@ public int deleteSchool(int id1){
 
 }
 
+public ResultSet fetchSchool(){
+ 
+        String retrieveQuery = String.format(
+                "SELECT * FROM school");
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(retrieveQuery);
+        return result;
+    }
+
 
 
     

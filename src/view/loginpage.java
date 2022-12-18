@@ -250,11 +250,7 @@ public class loginpage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_SignUp_ActionPerformed
 
     private void jButton_LogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LogInActionPerformed
-//        DbConnection db1 =new DbConnection();
-//        DbConnection conn1 = null;
-//        Statement stmt =null;
-//        ResultSet rs =null;
-//          
+
         
         String email1 = jTextField_Sign_In_Email_.getText();
         String password1=String.valueOf(jPasswordField_Sign_In_Password_.getPassword());
@@ -262,17 +258,18 @@ public class loginpage extends javax.swing.JFrame {
         TravellerController tc = new TravellerController();
         ResultSet retrievedTraveller = tc.retrieveTraveller(email1,password1);
 
+        
+        
+        
         try {
-             if(retrievedTraveller.next()){
+            if(retrievedTraveller.next()){
                 
                 this.dispose();
                 UserDashBoard user1=new UserDashBoard(retrievedTraveller.getInt("tr_id"));
                 user1.setVisible(true);
-            }
-             else if(email1.equals("admin@gmail.com") && password1.equals("pass345")){
-                 this.dispose();
-                 new adminboard().setVisible(true);             
-             }
+                      
+           }
+            
             else{
              JOptionPane.showMessageDialog(null,"Please enter valid email or password.");
             }

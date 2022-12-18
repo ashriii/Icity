@@ -5,6 +5,9 @@
 package view;
 import controller.TravellerController;
 import java.sql.*;
+
+import javax.swing.JOptionPane;
+
 import java.awt.*;
 /**
  *
@@ -13,6 +16,7 @@ import java.awt.*;
 public class UserDashBoard extends javax.swing.JFrame {
     int id ;
     int idUser;
+    int[] arrayId={1};
     /**
      * Creates new form UserDashBoard
      */
@@ -33,9 +37,9 @@ public class UserDashBoard extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel_Welcome_ = new java.awt.Label();
+        jButton_Profile_1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButton_LogOut_ = new javax.swing.JButton();
         jButton_Profile_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -44,51 +48,64 @@ public class UserDashBoard extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
         setFocusTraversalPolicyProvider(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_Welcome_.setBackground(new java.awt.Color(204,204,204));
+        jLabel_Welcome_.setBackground(new java.awt.Color(204, 255, 255));
         jLabel_Welcome_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel_Welcome_.setText("Welcome User");
+        jLabel_Welcome_.setAlignment(1);
         TravellerController t1 = new TravellerController();
         ResultSet rs=t1.fetchTraveller(id);
         try{
             while(rs.next()){
-                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name")+"!");
-                jLabel_Welcome_.setAlignment(1);;
-
-
+                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name"));
             }}
             catch(Exception e){
                 e.printStackTrace();
             }
             getContentPane().add(jLabel_Welcome_, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 250, 40));
+            if(id==arrayId[0]){
+            jButton_Profile_1.setBackground(new java.awt.Color(0, 102, 102));
+            jButton_Profile_1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+            jButton_Profile_1.setForeground(new java.awt.Color(255, 255, 255));
+            jButton_Profile_1.setText("Admin");
+            getContentPane().add(jButton_Profile_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
+
+
+            jButton_Profile_1.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_Profile_1ActionPerformed(evt);
+                }
+            });
+        }
+            else{
+                System.out.println("Not an admin");
+
+            }
+
+            
+        
 
             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
             jLabel2.setText("jLabel2");
             getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 70));
 
-            jButton2.setBackground(new java.awt.Color(0, 102, 102));
-            jButton2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-            jButton2.setForeground(new java.awt.Color(255, 255, 255));
-            jButton2.setText("Admin");
-            jButton2.addActionListener(new java.awt.event.ActionListener() {
+            jButton_LogOut_.setBackground(new java.awt.Color(0, 102, 102));
+            jButton_LogOut_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+            jButton_LogOut_.setForeground(new java.awt.Color(255, 255, 255));
+            jButton_LogOut_.setText("Log Out");
+            jButton_LogOut_.setActionCommand("");
+            jButton_LogOut_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton2ActionPerformed(evt);
+                    jButton_LogOut_ActionPerformed(evt);
                 }
             });
-            getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
-
-            jButton4.setBackground(new java.awt.Color(0, 102, 102));
-            jButton4.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-            jButton4.setForeground(new java.awt.Color(255, 255, 255));
-            jButton4.setText("Log Out");
-            jButton4.setActionCommand("");
-            getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 20, 110, -1));
+            getContentPane().add(jButton_LogOut_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 20, 110, -1));
 
             jButton_Profile_.setBackground(new java.awt.Color(0, 102, 102));
             jButton_Profile_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -101,18 +118,14 @@ public class UserDashBoard extends javax.swing.JFrame {
             });
             getContentPane().add(jButton_Profile_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 110, 30));
 
-<<<<<<< HEAD
             jLabel1.setBackground(new java.awt.Color(102, 255, 255));
             jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
-        
+
             jButton3.setBackground(new java.awt.Color(153, 153, 153));
             jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton3.setText("Markets");
             getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
-=======
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 1063, 80));
->>>>>>> paribesh
 
             jButton5.setBackground(new java.awt.Color(153, 153, 153));
             jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -139,15 +152,11 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton9.setText("Parks");
             getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
 
-            jPanel1.setBackground(new java.awt.Color(0, 102, 102));
-            getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 1270, 290));
+            jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+            getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 1270, 310));
 
             pack();
         }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:s
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton_Profile_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Profile_ActionPerformed
         // TODO add your handling code here:
@@ -156,6 +165,17 @@ public class UserDashBoard extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton_Profile_ActionPerformed
+
+    private void jButton_LogOut_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LogOut_ActionPerformed
+        this.dispose();
+        new loginpage().setVisible(true);
+    }//GEN-LAST:event_jButton_LogOut_ActionPerformed
+
+    private void jButton_Profile_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Profile_1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        new adminboard().setVisible(true);
+    }//GEN-LAST:event_jButton_Profile_1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,18 +213,18 @@ public class UserDashBoard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButton_LogOut_;
     private javax.swing.JButton jButton_Profile_;
+    private javax.swing.JButton jButton_Profile_1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private java.awt.Label jLabel_Welcome_;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
