@@ -11,6 +11,8 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Traveller;
+import java.util.prefs.Preferences;
+
 /**
  *
  * @author ASUS
@@ -21,6 +23,7 @@ public class loginpage extends javax.swing.JFrame {
      * Creates new form loginPage
      */int a=0;
      int b=0;
+    private Preferences prefs;
     public loginpage() {
         
         initComponents();
@@ -54,11 +57,11 @@ public class loginpage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 0, 204));
         jLabel2.setText("         Sign In");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Variable", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Roboto Variable", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 0, 204));
         jLabel3.setText("Sign in to find new solution for destination ");
 
@@ -82,7 +85,7 @@ public class loginpage extends javax.swing.JFrame {
         });
         
         jButton_SignUp_.setBackground(new java.awt.Color(153, 0, 204));
-        jButton_SignUp_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton_SignUp_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton_SignUp_.setText("Sign Up");
         jButton_SignUp_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +94,7 @@ public class loginpage extends javax.swing.JFrame {
         });
 
         jButton_LogIn.setBackground(new java.awt.Color(153, 0, 204));
-        jButton_LogIn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton_LogIn.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton_LogIn.setText("Log In");
         jButton_LogIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +102,7 @@ public class loginpage extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox_Remember_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jCheckBox_Remember_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jCheckBox_Remember_.setForeground(new java.awt.Color(102, 0, 204));
         jCheckBox_Remember_.setText("Remember me");
         jCheckBox_Remember_.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 0, 204), 1, true));
@@ -110,7 +113,7 @@ public class loginpage extends javax.swing.JFrame {
         });
 
         jButton_Forget_Password_.setBackground(new java.awt.Color(242, 242, 242));
-        jButton_Forget_Password_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton_Forget_Password_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton_Forget_Password_.setForeground(new java.awt.Color(102, 0, 204));
         jButton_Forget_Password_.setText("Forget Password ?");
         jButton_Forget_Password_.setBorder(null);
@@ -123,11 +126,11 @@ public class loginpage extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 0, 204));
         jLabel6.setText("Password");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 0, 204));
         jLabel7.setText("Email");
 
@@ -210,7 +213,53 @@ public class loginpage extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+
+
+        // Initialize preferences object
+    prefs = Preferences.userNodeForPackage(loginpage.class);
+
+    // Check if "remember me" information is stored in the preferences
+    String savedEmail = prefs.get("email", "");
+    String savedPassword = prefs.get("password", "");
+    if (!savedEmail.isEmpty() && !savedPassword.isEmpty()) {
+        // Pre-populate fields with saved values
+        jTextField_Sign_In_Email_.setText(savedEmail);
+        jPasswordField_Sign_In_Password_.setText(savedPassword);
+        jCheckBox_Remember_.setSelected(true);
+
+    }
+
+    // Add action listener to login button
+    jButton_LogIn.addActionListener(e -> {
+        // Get entered username and password
+        String email = jTextField_Sign_In_Email_.getText();
+        String password = String.valueOf(jPasswordField_Sign_In_Password_.getPassword());
+
+        if (jCheckBox_Remember_.isSelected()) {
+            // Save username and password to preferences
+            prefs.put("email", email);
+            prefs.put("password", new String(password));
+        } else {
+            // Clear saved username and password from preferences
+            prefs.remove("email");
+            prefs.remove("password");
+        }
+
+        
+    });
+
+    
+    
+// }
+
+// private boolean performLogin(String email)
+
+
+
+
+    }
+
+    
 
     private void jTextField_Sign_In_Email_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_Sign_In_Email_ActionPerformed
         // TODO add your handling code here:
@@ -239,7 +288,7 @@ public class loginpage extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField_Sign_In_Email_FocusLost
 
     private void jCheckBox_Remember_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_Remember_ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jCheckBox_Remember_ActionPerformed
 
     private void jButton_SignUp_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignUp_ActionPerformed
@@ -257,13 +306,15 @@ public class loginpage extends javax.swing.JFrame {
         
         TravellerController tc = new TravellerController();
         ResultSet retrievedTraveller = tc.retrieveTraveller(email1,password1);
-
-        if(email1.equals("") && password1.equals("")){
-             JOptionPane.showMessageDialog(null,"Email and password field cannot be empty");
-        }
         
         
         try {
+
+
+            if(email1.equals("") && password1.equals("")){
+                JOptionPane.showMessageDialog(null,"Email and password field cannot be empty");
+           }
+   
             if(retrievedTraveller.next()){
                 
                 this.dispose();

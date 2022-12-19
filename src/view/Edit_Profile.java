@@ -180,7 +180,7 @@ public class Edit_Profile extends javax.swing.JFrame {
     private void jButton_Cancel_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Cancel_ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new Profilescreen(1).setVisible(true);
+        new Profilescreen(id).setVisible(true);
     }//GEN-LAST:event_jButton_Cancel_ActionPerformed
 
     /**
