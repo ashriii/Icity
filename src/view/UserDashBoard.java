@@ -7,6 +7,7 @@ import controller.TravellerController;
 import controller.HospitalController;
 import controller.OfficeController;
 import controller.TouristAreaController;
+import controller.ParkController;
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -192,10 +193,22 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jButton_TouristArea_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
 >>>>>>> 5f05d432fd372885e981fc6013ede3fe6cada462
 
+<<<<<<< HEAD
             jButton_Park_.setBackground(new java.awt.Color(153, 153, 153));
             jButton_Park_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Park_.setText("Parks");
             getContentPane().add(jButton_Park_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
+=======
+            jButton9.setBackground(new java.awt.Color(153, 153, 153));
+            jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton9.setText("Parks");
+            jButton9.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton9ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
+>>>>>>> paribesh
 
             jTable_Data_.setBackground(new java.awt.Color(0, 153, 102));
             jTable_Data_.setModel(new javax.swing.table.DefaultTableModel(
@@ -354,6 +367,33 @@ public class UserDashBoard extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+       ParkController pc =new ParkController();
+        ResultSet rs = pc.fetchPark();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
