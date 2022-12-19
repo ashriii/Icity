@@ -1,7 +1,7 @@
-public ResultSet fetchMarket(){
+public ResultSet fetchOffice(){
  
     String retrieveQuery = String.format(
-            "SELECT market_name, market_description, market_address, market_contact FROM market");
+            "SELECT office_name, office_description, office_address, office_contact FROM office");
     dbConnection = new DbConnection();
     ResultSet result = dbConnection.retrieve(retrieveQuery);
     return result;
