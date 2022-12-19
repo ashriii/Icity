@@ -4,6 +4,14 @@
  */
 package view;
 import controller.TravellerController;
+<<<<<<< HEAD
+=======
+import controller.HospitalController;
+import controller.OfficeController;
+import controller.TouristAreaController;
+import controller.ParkController;
+import controller.MarketController;
+>>>>>>> 6bf0822a3f1b332018af9370d67bc71183381cdf
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -120,10 +128,29 @@ public class UserDashBoard extends javax.swing.JFrame {
             jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
 
+<<<<<<< HEAD
             jButton3.setBackground(new java.awt.Color(153, 153, 153));
             jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton3.setText("Markets");
             getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
+=======
+<<<<<<< HEAD
+            jButton_Market_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Market_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Market_.setText("Markets");
+            getContentPane().add(jButton_Market_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
+=======
+            jButton3.setBackground(new java.awt.Color(153, 153, 153));
+            jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton3.setText("Markets");
+            jButton3.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton3ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
+>>>>>>> paribesh
+>>>>>>> 6bf0822a3f1b332018af9370d67bc71183381cdf
 
             jButton_School_.setBackground(new java.awt.Color(153, 153, 153));
             jButton_School_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -145,6 +172,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton7.setText("Offices");
             getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, 30));
 
+<<<<<<< HEAD
             jButton8.setBackground(new java.awt.Color(153, 153, 153));
             jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton8.setText("Tourist Area");
@@ -154,6 +182,46 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton9.setText("Parks");
             getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
+=======
+<<<<<<< HEAD
+            jButton8.setBackground(new java.awt.Color(153, 153, 153));
+            jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton8.setText("Tourist Area");
+            jButton8.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton8ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
+=======
+            jButton_TouristArea_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_TouristArea_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_TouristArea_.setText("Tourist Area");
+            jButton_TouristArea_.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_TouristArea_ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton_TouristArea_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
+>>>>>>> 5f05d432fd372885e981fc6013ede3fe6cada462
+
+<<<<<<< HEAD
+            jButton_Park_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Park_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Park_.setText("Parks");
+            getContentPane().add(jButton_Park_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
+=======
+            jButton9.setBackground(new java.awt.Color(153, 153, 153));
+            jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton9.setText("Parks");
+            jButton9.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton9ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
+>>>>>>> paribesh
+>>>>>>> 6bf0822a3f1b332018af9370d67bc71183381cdf
 
             jTable_Data_.setBackground(new java.awt.Color(0, 153, 102));
             jTable_Data_.setModel(new javax.swing.table.DefaultTableModel(
@@ -220,6 +288,156 @@ public class UserDashBoard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_School_ActionPerformed
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private void jButton_Hospital_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Hospital_ActionPerformed
+        
+        
+        
+    }//GEN-LAST:event_jButton_Hospital_ActionPerformed
+
+    private void jButton_TouristArea_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TouristArea_ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_TouristArea_ActionPerformed
+=======
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+      HospitalController hc =new HospitalController();
+        ResultSet rs = hc.fetchHospital();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){    //using for loop for showing the data on userdashboard
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){  //using while loop for showing the data of different data on userdashboard
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        OfficeController oc =new OfficeController();
+        ResultSet rs = oc.fetchOffice();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {  //find the error and throwing the exception handeling 
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+>>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+       TouristAreaController tc =new TouristAreaController();
+        ResultSet rs = tc.fetchTouristArea();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+       ParkController pc =new ParkController();
+        ResultSet rs = pc.fetchPark();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        MarketController mc =new MarketController();
+        ResultSet rs = mc.fetchMarket();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+>>>>>>> 6bf0822a3f1b332018af9370d67bc71183381cdf
     /**
      * @param args the command line arguments
      */
