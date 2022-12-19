@@ -6,6 +6,7 @@ package view;
 import controller.TravellerController;
 import controller.HospitalController;
 import controller.OfficeController;
+import controller.TouristAreaController;
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -156,6 +157,11 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton8.setBackground(new java.awt.Color(153, 153, 153));
             jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton8.setText("Tourist Area");
+            jButton8.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton8ActionPerformed(evt);
+                }
+            });
             getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
 
             jButton9.setBackground(new java.awt.Color(153, 153, 153));
@@ -281,6 +287,33 @@ public class UserDashBoard extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+       TouristAreaController tc =new TouristAreaController();
+        ResultSet rs = tc.fetchTouristArea();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
