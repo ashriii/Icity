@@ -258,7 +258,9 @@ public class loginpage extends javax.swing.JFrame {
         TravellerController tc = new TravellerController();
         ResultSet retrievedTraveller = tc.retrieveTraveller(email1,password1);
 
-        
+        if(email1.equals("") && password1.equals("")){
+             JOptionPane.showMessageDialog(null,"Email and password field cannot be empty");
+        }
         
         
         try {

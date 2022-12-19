@@ -37,6 +37,7 @@ public class forgetpassword extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jTextField_Forget_Password_Email_ = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -45,7 +46,7 @@ public class forgetpassword extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(132, 151, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setForeground(new java.awt.Color(132, 151, 255));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -127,6 +128,16 @@ public class forgetpassword extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 1.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 80));
 
+        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setFont(new java.awt.Font("Roboto", 1, 14));
+        jButton2.setText("Back");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 90, 40));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/Rectangle 30.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 530));
 
@@ -184,6 +195,11 @@ public class forgetpassword extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton_Reset_Password_ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+        new loginpage().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -221,6 +237,7 @@ public class forgetpassword extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton_Reset_Password_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
