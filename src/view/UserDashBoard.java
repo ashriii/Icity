@@ -4,6 +4,15 @@
  */
 package view;
 import controller.TravellerController;
+<<<<<<< HEAD
+=======
+
+import controller.HospitalController;
+import controller.OfficeController;
+import controller.TouristAreaController;
+import controller.ParkController;
+import controller.MarketController;
+>>>>>>> paribesh
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -214,8 +223,74 @@ public class UserDashBoard extends javax.swing.JFrame {
         new adminboard().setVisible(true);
     }//GEN-LAST:event_jButton_Profile_1ActionPerformed
 
+<<<<<<< HEAD
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+=======
+    private void jButton_School_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_School_ActionPerformed
+        SchoolController sc =new SchoolController();
+        ResultSet rs = sc.fetchSchool();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton_School_ActionPerformed
+
+
+    private void jButton_Hospital_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Hospital_ActionPerformed
+        
+        
+        
+    }//GEN-LAST:event_jButton_Hospital_ActionPerformed
+
+    private void jButton_TouristArea_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TouristArea_ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_TouristArea_ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+      HospitalController hc =new HospitalController();
+        ResultSet rs = hc.fetchHospital();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){    //using for loop for showing the data on userdashboard
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){  //using while loop for showing the data of different data on userdashboard
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {  //handeling the error
+            ex.printStackTrace();
+        }
+>>>>>>> paribesh
     }//GEN-LAST:event_jButton6ActionPerformed
 
 <<<<<<< HEAD
@@ -245,6 +320,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+<<<<<<< HEAD
 >>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
 =======
     private void jButton_School_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_School_ActionPerformed
@@ -252,6 +328,92 @@ public class UserDashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_School_ActionPerformed
 >>>>>>> 4d64a6638dc53d624b4dfc07bc6ddde9bba37f7e
 
+=======
+
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+       TouristAreaController tc =new TouristAreaController();
+        ResultSet rs = tc.fetchTouristArea();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+       ParkController pc =new ParkController();
+        ResultSet rs = pc.fetchPark();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        MarketController mc =new MarketController();
+        ResultSet rs = mc.fetchMarket();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+
+>>>>>>> paribesh
     /**
      * @param args the command line arguments
      */
