@@ -8,6 +8,7 @@ import controller.HospitalController;
 import controller.OfficeController;
 import controller.TouristAreaController;
 import controller.ParkController;
+import controller.MarketController;
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -119,10 +120,22 @@ public class UserDashBoard extends javax.swing.JFrame {
             jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
 
+<<<<<<< HEAD
             jButton_Market_.setBackground(new java.awt.Color(153, 153, 153));
             jButton_Market_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Market_.setText("Markets");
             getContentPane().add(jButton_Market_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
+=======
+            jButton3.setBackground(new java.awt.Color(153, 153, 153));
+            jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton3.setText("Markets");
+            jButton3.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton3ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
+>>>>>>> paribesh
 
             jButton_School_.setBackground(new java.awt.Color(153, 153, 153));
             jButton_School_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -394,6 +407,33 @@ public class UserDashBoard extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        MarketController mc =new MarketController();
+        ResultSet rs = mc.fetchMarket();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
