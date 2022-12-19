@@ -303,14 +303,14 @@ public class adminboard extends javax.swing.JFrame {
             //Update tourist area info
             case "Tourist Area":
                 
-                TouristAreaController tc = new TouristAreaController();
-                int updatedTouristArea = tc.updateTouristArea(id, name, description, address, contact);
-                if (updatedTouristArea>0){
+                TouristAreaController tc = new TouristAreaController();// data comming from the controller 
+                int updatedTouristArea = tc.updateTouristArea(id, name, description, address, contact);//update the details of the user like id, name etc
+                if (updatedTouristArea>0){ //using if else condition finding weather the date is fulfilled or not 
                     JOptionPane.showMessageDialog(null,"Tourist area updated successfully.");
                     
                 }
                 else{
-                    JOptionPane.showMessageDialog(null,"Error in updation.");
+                    JOptionPane.showMessageDialog(null,"Error in updation.");// exception handeling in the updation
                     
                 }   break;
             //Update Park info
