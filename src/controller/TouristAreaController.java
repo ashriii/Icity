@@ -62,12 +62,14 @@ public int deleteTouristArea(int id1){
 
 public ResultSet fetchTouristArea(){
  
-        String retrieveQuery = String.format(
-                "SELECT * FROM tourist_area");
-        dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(retrieveQuery);
-        return result;
-    }
+    String retrieveQuery = String.format(
+            "SELECT tourist_area_name, tourist_area_description, tourist_area_address, tourist_area_contact FROM tourist_area");
+    dbConnection = new DbConnection();
+    ResultSet result = dbConnection.retrieve(retrieveQuery);
+    return result;
+}
+
+
 
 
     
