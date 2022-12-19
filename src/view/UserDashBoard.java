@@ -4,6 +4,8 @@
  */
 package view;
 import controller.TravellerController;
+import controller.HospitalController;
+import controller.OfficeController;
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -130,6 +132,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             });
             getContentPane().add(jButton_School_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 120, 30));
 
+<<<<<<< HEAD
             jButton_Hospital_.setBackground(new java.awt.Color(153, 153, 153));
             jButton_Hospital_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Hospital_.setText("Hospital");
@@ -144,6 +147,27 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton_Office_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Office_.setText("Offices");
             getContentPane().add(jButton_Office_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, 30));
+=======
+            jButton6.setBackground(new java.awt.Color(153, 153, 153));
+            jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton6.setText("Hospital");
+            jButton6.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton6ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 120, 30));
+
+            jButton7.setBackground(new java.awt.Color(153, 153, 153));
+            jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton7.setText("Offices");
+            jButton7.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton7ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, 30));
+>>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
 
             jButton_TouristArea_.setBackground(new java.awt.Color(153, 153, 153));
             jButton_TouristArea_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -225,6 +249,7 @@ public class UserDashBoard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_School_ActionPerformed
 
+<<<<<<< HEAD
     private void jButton_Hospital_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Hospital_ActionPerformed
         
         
@@ -234,6 +259,61 @@ public class UserDashBoard extends javax.swing.JFrame {
     private void jButton_TouristArea_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TouristArea_ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_TouristArea_ActionPerformed
+=======
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+      HospitalController hc =new HospitalController();
+        ResultSet rs = hc.fetchHospital();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        OfficeController oc =new OfficeController();
+        ResultSet rs = oc.fetchOffice();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+>>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
 
     /**
      * @param args the command line arguments
@@ -271,8 +351,17 @@ public class UserDashBoard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton jButton_Admin_;
     private javax.swing.JButton jButton_Hospital_;
+=======
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButton_Admin_;
+>>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
     private javax.swing.JButton jButton_LogOut_;
     private javax.swing.JButton jButton_Market_;
     private javax.swing.JButton jButton_Office_;

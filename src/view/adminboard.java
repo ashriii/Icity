@@ -241,7 +241,7 @@ public class adminboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField_Name_ActionPerformed
 
     private void jButton_Update_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Update_ActionPerformed
-        //Update in data
+        //Update the data in various field 
         String category=jTextField_Category_.getText();
         String name =jTextField_Name_.getText();
         int id =Integer.parseInt(jTextField_Id_.getText());
@@ -249,7 +249,7 @@ public class adminboard extends javax.swing.JFrame {
         String description=jTextField_Description_.getText();
         String address =jTextField_Address_.getText();
         
-        switch (category) {
+        switch (category) { //switch method helps to change the category 
             //Update Hospital info
             case "Hospital":
                 HospitalController hc = new HospitalController();
@@ -274,7 +274,7 @@ public class adminboard extends javax.swing.JFrame {
                 else{
                     JOptionPane.showMessageDialog(null,"Error in updation.");
                     
-                }   break;
+                }   break; // helps to stop the loop and break after complection of running
             //Update Office info
             case "Office":
                 
