@@ -244,9 +244,9 @@ public class loginpage extends javax.swing.JFrame {
 
     private void jButton_SignUp_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignUp_ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        RegistrationScreen reg = new RegistrationScreen();
-        reg.setVisible(true);
+        this.dispose();//method to distory the current frame 
+        RegistrationScreen reg = new RegistrationScreen();//moving towars the registration page 
+        reg.setVisible(true);// display the next page after login page  
     }//GEN-LAST:event_jButton_SignUp_ActionPerformed
 
     private void jButton_LogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LogInActionPerformed
@@ -273,7 +273,7 @@ public class loginpage extends javax.swing.JFrame {
            }
             
             else{
-             JOptionPane.showMessageDialog(null,"Please enter valid email or password.");
+             JOptionPane.showMessageDialog(null,"Please enter valid email or password.");//handeling the error comming out from the panel
             }
          } catch (Exception ex) {
              Logger.getLogger(loginpage.class.getName()).log(Level.SEVERE, null, ex);
