@@ -13,34 +13,25 @@ import javax.swing.*;
  */
 public class Resetpassword extends javax.swing.JFrame {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     /**
      * Creates ne w form Resetpassword
      */
     public Resetpassword() {
         initComponents();
-=======
-=======
->>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
-   
+    }
     
     public String email ="";
     public String number="";
     
-    public Resetpassword(String email,String number) {
+    public Resetpassword(String email,String number){
             this.email=email;
             this.number=number;
             initComponents();
         
     }
-    Resetpassword(){
-         initComponents();
-<<<<<<< HEAD
->>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
-=======
->>>>>>> 9f07f2c60ac9c5a708244125813d0e6d2864b9b1
-    }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -52,7 +43,7 @@ public class Resetpassword extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jButton_Back_ = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -67,15 +58,15 @@ public class Resetpassword extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setFont(new java.awt.Font("Roboto", 1, 12));
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Back_.setBackground(new java.awt.Color(0, 102, 102));
+        jButton_Back_.setFont(new java.awt.Font("Roboto", 1, 12));
+        jButton_Back_.setText("Back");
+        jButton_Back_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton_Back_ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 90, 30));
+        jPanel1.add(jButton_Back_, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 90, 30));
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -193,9 +184,10 @@ public class Resetpassword extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton_Submit_ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton_Back_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Back_ActionPerformed
+        this.dispose();
+        new forgetpassword().setVisible(true);
+    }//GEN-LAST:event_jButton_Back_ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,7 +229,7 @@ public class Resetpassword extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BGphoto;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton_Back_;
     private javax.swing.JButton jButton_Submit_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
