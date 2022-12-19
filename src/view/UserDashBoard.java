@@ -21,7 +21,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class UserDashBoard extends javax.swing.JFrame {
     int id ;
-    int idUser;
     int[] arrayId={1};
     /**
      * Creates new form UserDashBoard
@@ -48,12 +47,12 @@ public class UserDashBoard extends javax.swing.JFrame {
         jButton_LogOut_ = new javax.swing.JButton();
         jButton_Profile_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jButton_Market_ = new javax.swing.JButton();
         jButton_School_ = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        jButton_Hospital_ = new javax.swing.JButton();
+        jButton_Office_ = new javax.swing.JButton();
+        jButton_TouristArea_ = new javax.swing.JButton();
+        jButton_Park_ = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable_Data_ = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
@@ -119,10 +118,10 @@ public class UserDashBoard extends javax.swing.JFrame {
             jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
 
-            jButton3.setBackground(new java.awt.Color(153, 153, 153));
-            jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            jButton3.setText("Markets");
-            getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
+            jButton_Market_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Market_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Market_.setText("Markets");
+            getContentPane().add(jButton_Market_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
 
             jButton_School_.setBackground(new java.awt.Color(153, 153, 153));
             jButton_School_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -134,6 +133,22 @@ public class UserDashBoard extends javax.swing.JFrame {
             });
             getContentPane().add(jButton_School_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 120, 30));
 
+<<<<<<< HEAD
+            jButton_Hospital_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Hospital_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Hospital_.setText("Hospital");
+            jButton_Hospital_.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_Hospital_ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton_Hospital_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 120, 30));
+
+            jButton_Office_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Office_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Office_.setText("Offices");
+            getContentPane().add(jButton_Office_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, 30));
+=======
             jButton6.setBackground(new java.awt.Color(153, 153, 153));
             jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton6.setText("Hospital");
@@ -153,7 +168,9 @@ public class UserDashBoard extends javax.swing.JFrame {
                 }
             });
             getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, 30));
+>>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
 
+<<<<<<< HEAD
             jButton8.setBackground(new java.awt.Color(153, 153, 153));
             jButton8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton8.setText("Tourist Area");
@@ -163,11 +180,22 @@ public class UserDashBoard extends javax.swing.JFrame {
                 }
             });
             getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
+=======
+            jButton_TouristArea_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_TouristArea_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_TouristArea_.setText("Tourist Area");
+            jButton_TouristArea_.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_TouristArea_ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton_TouristArea_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
+>>>>>>> 5f05d432fd372885e981fc6013ede3fe6cada462
 
-            jButton9.setBackground(new java.awt.Color(153, 153, 153));
-            jButton9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            jButton9.setText("Parks");
-            getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
+            jButton_Park_.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Park_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Park_.setText("Parks");
+            getContentPane().add(jButton_Park_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 120, 30));
 
             jTable_Data_.setBackground(new java.awt.Color(0, 153, 102));
             jTable_Data_.setModel(new javax.swing.table.DefaultTableModel(
@@ -234,6 +262,17 @@ public class UserDashBoard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_School_ActionPerformed
 
+<<<<<<< HEAD
+    private void jButton_Hospital_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Hospital_ActionPerformed
+        
+        
+        
+    }//GEN-LAST:event_jButton_Hospital_ActionPerformed
+
+    private void jButton_TouristArea_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TouristArea_ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_TouristArea_ActionPerformed
+=======
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
       HospitalController hc =new HospitalController();
         ResultSet rs = hc.fetchHospital();
@@ -287,6 +326,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+>>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
        TouristAreaController tc =new TouristAreaController();
@@ -351,15 +391,24 @@ public class UserDashBoard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+    private javax.swing.JButton jButton_Admin_;
+    private javax.swing.JButton jButton_Hospital_;
+=======
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JButton jButton_Admin_;
+>>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
     private javax.swing.JButton jButton_LogOut_;
+    private javax.swing.JButton jButton_Market_;
+    private javax.swing.JButton jButton_Office_;
+    private javax.swing.JButton jButton_Park_;
     private javax.swing.JButton jButton_Profile_;
     private javax.swing.JButton jButton_School_;
+    private javax.swing.JButton jButton_TouristArea_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private java.awt.Label jLabel_Welcome_;
