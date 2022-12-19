@@ -4,6 +4,7 @@
  */
 package view;
 import controller.TravellerController;
+import controller.HospitalController;
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -40,7 +41,7 @@ public class UserDashBoard extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel_Welcome_ = new java.awt.Label();
-        jButton_Profile_1 = new javax.swing.JButton();
+        jButton_Admin_ = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton_LogOut_ = new javax.swing.JButton();
         jButton_Profile_ = new javax.swing.JButton();
@@ -60,35 +61,31 @@ public class UserDashBoard extends javax.swing.JFrame {
         setFocusTraversalPolicyProvider(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        // jLabel_Welcome_.setBackground(new java.awt.Color(204, 255, 255));
+        jLabel_Welcome_.setBackground(new java.awt.Color(204, 255, 255));
         jLabel_Welcome_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel_Welcome_.setText("Welcome User");
-        jLabel_Welcome_.setAlignment(1);
         TravellerController t1 = new TravellerController();
-        ResultSet rs=t1.fetchTraveller(id);
+        ResultSet rs=t1.fetchTraveller(userId);
         try{
             while(rs.next()){
-                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name"));
+                jLabel_Welcome_.setText("Welcome "+ rs.getText("tr_name"));
             }}
-            catch(Exception e){
+            catch(Excpetion e){
                 e.printStackTrace();
             }
             getContentPane().add(jLabel_Welcome_, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 250, 40));
 
-            //Admin login to show admin button
-
-            if(id==arrayId[0]){
-            jButton_Profile_1.setBackground(new java.awt.Color(0, 102, 102));
-            jButton_Profile_1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-            jButton_Profile_1.setForeground(new java.awt.Color(255, 255, 255));
-            jButton_Profile_1.setText("Admin");
-            jButton_Profile_1.addActionListener(new java.awt.event.ActionListener() {
+            jButton_Admin_.setBackground(new java.awt.Color(0, 102, 102));
+            jButton_Admin_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+            jButton_Admin_.setForeground(new java.awt.Color(255, 255, 255));
+            jButton_Admin_.setText("Admin");
+            jButton_Admin_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton_Profile_1ActionPerformed(evt);
+                    jButton_Admin_ActionPerformed(evt);
                 }
             });
-            getContentPane().add(jButton_Profile_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
-        }
+            getContentPane().add(jButton_Admin_, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
+
             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
             jLabel2.setText("jLabel2");
             getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 70));
@@ -138,6 +135,11 @@ public class UserDashBoard extends javax.swing.JFrame {
             jButton6.setBackground(new java.awt.Color(153, 153, 153));
             jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton6.setText("Hospital");
+            jButton6.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton6ActionPerformed(evt);
+                }
+            });
             getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 120, 30));
 
             jButton7.setBackground(new java.awt.Color(153, 153, 153));
@@ -220,6 +222,33 @@ public class UserDashBoard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_School_ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+      HospitalController hc =new HospitalController();
+        ResultSet rs = hc.fetchHospital();
+        try {
+            ResultSetMetaData rsmd=rs.getMetaData();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            int colm=rsmd.getColumnCount();
+            String[] colmnName=new String[colm];
+            for(int i=0;i<colm;i++){
+                colmnName[i]=rsmd.getColumnName(i+1);
+                model.setColumnIdentifiers(colmnName);
+            }
+            
+            while(rs.next()){
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
+                   String[] row={name,description,address,contact};
+                   model.addRow(row);
+                }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -261,9 +290,9 @@ public class UserDashBoard extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButton_Admin_;
     private javax.swing.JButton jButton_LogOut_;
     private javax.swing.JButton jButton_Profile_;
-    private javax.swing.JButton jButton_Profile_1;
     private javax.swing.JButton jButton_School_;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
