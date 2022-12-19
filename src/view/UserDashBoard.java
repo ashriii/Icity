@@ -329,7 +329,7 @@ public class UserDashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        OfficeController oc =new OfficeController();
+        OfficeController oc =new OfficeController(); //controller from the office to update the code
         ResultSet rs = oc.fetchOffice();
         try {
             ResultSetMetaData rsmd=rs.getMetaData();
