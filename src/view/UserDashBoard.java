@@ -307,12 +307,12 @@ public class UserDashBoard extends javax.swing.JFrame {
             DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
             int colm=rsmd.getColumnCount();
             String[] colmnName=new String[colm];
-            for(int i=0;i<colm;i++){
+            for(int i=0;i<colm;i++){    //using for loop for showing the data on userdashboard
                 colmnName[i]=rsmd.getColumnName(i+1);
                 model.setColumnIdentifiers(colmnName);
             }
             
-            while(rs.next()){
+            while(rs.next()){  //using while loop for showing the data of different data on userdashboard
                    String name,description,address,contact;            
                    name=rs.getString(1);
                    description=rs.getString(2);
@@ -348,7 +348,7 @@ public class UserDashBoard extends javax.swing.JFrame {
                    String[] row={name,description,address,contact};
                    model.addRow(row);
                 }
-        } catch (Exception ex) {
+        } catch (Exception ex) {  //find the error and throwing the exception handeling 
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton7ActionPerformed
