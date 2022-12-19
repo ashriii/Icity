@@ -60,9 +60,10 @@ public class UserDashBoard extends javax.swing.JFrame {
         setFocusTraversalPolicyProvider(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_Welcome_.setBackground(new java.awt.Color(204, 255, 255));
+        // jLabel_Welcome_.setBackground(new java.awt.Color(204, 255, 255));
         jLabel_Welcome_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel_Welcome_.setText("Welcome User");
+        jLabel_Welcome_.setAlignment(1);
         TravellerController t1 = new TravellerController();
         ResultSet rs=t1.fetchTraveller(id);
         try{
@@ -200,18 +201,17 @@ public class UserDashBoard extends javax.swing.JFrame {
             DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
             int colm=rsmd.getColumnCount();
             String[] colmnName=new String[colm];
-            for(int i=1;i<colm;i++){
+            for(int i=0;i<colm;i++){
                 colmnName[i]=rsmd.getColumnName(i+1);
                 model.setColumnIdentifiers(colmnName);
             }
             
             while(rs.next()){
-                   String id, name,description,address,contact;            
-                   id=rs.getString(1);
-                   name=rs.getString(2);
-                   description=rs.getString(3);
-                   address=rs.getString(4);
-                   contact=rs.getString(5);
+                   String name,description,address,contact;            
+                   name=rs.getString(1);
+                   description=rs.getString(2);
+                   address=rs.getString(3);
+                   contact=rs.getString(4);
                    String[] row={name,description,address,contact};
                    model.addRow(row);
                 }

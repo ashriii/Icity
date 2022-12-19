@@ -80,7 +80,7 @@ public class loginpage extends javax.swing.JFrame {
                 jTextField_Sign_In_Email_ActionPerformed(evt);
             }
         });
-
+        
         jButton_SignUp_.setBackground(new java.awt.Color(153, 0, 204));
         jButton_SignUp_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton_SignUp_.setText("Sign Up");
