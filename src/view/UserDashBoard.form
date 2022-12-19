@@ -234,11 +234,7 @@
         <Property name="text" type="java.lang.String" value="Tourist Area"/>
       </Properties>
       <Events>
-<<<<<<< HEAD
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
-=======
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_TouristArea_ActionPerformed"/>
->>>>>>> 5f05d432fd372885e981fc6013ede3fe6cada462
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

@@ -4,14 +4,12 @@
  */
 package view;
 import controller.TravellerController;
-<<<<<<< HEAD
-=======
+
 import controller.HospitalController;
 import controller.OfficeController;
 import controller.TouristAreaController;
 import controller.ParkController;
 import controller.MarketController;
->>>>>>> 6bf0822a3f1b332018af9370d67bc71183381cdf
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -288,9 +286,7 @@ public class UserDashBoard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_School_ActionPerformed
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
     private void jButton_Hospital_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Hospital_ActionPerformed
         
         
@@ -300,7 +296,7 @@ public class UserDashBoard extends javax.swing.JFrame {
     private void jButton_TouristArea_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TouristArea_ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_TouristArea_ActionPerformed
-=======
+
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
       HospitalController hc =new HospitalController();
         ResultSet rs = hc.fetchHospital();
@@ -323,7 +319,7 @@ public class UserDashBoard extends javax.swing.JFrame {
                    String[] row={name,description,address,contact};
                    model.addRow(row);
                 }
-        } catch (Exception ex) {
+        } catch (Exception ex) {  //handeling the error
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -354,7 +350,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton7ActionPerformed
->>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
+
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
        TouristAreaController tc =new TouristAreaController();
@@ -437,7 +433,7 @@ public class UserDashBoard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
->>>>>>> 6bf0822a3f1b332018af9370d67bc71183381cdf
+
     /**
      * @param args the command line arguments
      */
