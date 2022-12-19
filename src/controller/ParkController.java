@@ -58,12 +58,14 @@ public int deletePark(int id1){
 }
 public ResultSet fetchPark(){
  
-        String retrieveQuery = String.format(
-                "SELECT * FROM park");
-        dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(retrieveQuery);
-        return result;
-    }
+    String retrieveQuery = String.format(
+            "SELECT park_name, park_description, park_address, park_contact FROM park");
+    dbConnection = new DbConnection();
+    ResultSet result = dbConnection.retrieve(retrieveQuery);
+    return result;
+}
+
+
 
 
     
