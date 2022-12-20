@@ -8,6 +8,7 @@ import java.io.File;
 import java.sql.*;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileSystemView;
 /**
  *
@@ -151,7 +152,6 @@ public class Profilescreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Back_ActionPerformed
 
     private void jButton_Edit_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_1ActionPerformed
-//        new AddImage().setVisible(true);
     file = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
         int r = file.showOpenDialog(null);
         
@@ -159,6 +159,19 @@ public class Profilescreen extends javax.swing.JFrame {
      if (r == JFileChooser.APPROVE_OPTION) {
     
     File selectedFile = file.getSelectedFile();
+    String image=String.valueOf(selectedFile);
+    int id=userId;
+    
+    TravellerController tc = new TravellerController();
+    int updatedImage=tc.insertImage(id, image);
+    if(updatedImage>0){
+        JOptionPane.showMessageDialog(null,"Image Updated");
+    }
+    else{
+        JOptionPane.showMessageDialog(null,"Error, please try again.");
+
+    }
+    
     
 }
     }//GEN-LAST:event_jButton_Edit_1ActionPerformed

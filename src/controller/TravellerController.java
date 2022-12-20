@@ -81,17 +81,26 @@ public class TravellerController{
     }
     
     
-     public int insertImage(int id,String image){
+     public int insertImage(int id1,String image1){
+        int id=id1;
+        String image=image1;
+     
         String updateQuery=String.format(
-        "update registration_table set tr_image='%s' where tr_id='%d'",image,id);
-        
-    
-        
+        "update registration_table set tr_image='%s' where tr_id=%d",image,id);
     
     dbConnection = new DbConnection();
     int result = dbConnection.manipulate(updateQuery);
-    return result;   
-   
-    
+    return result;     
+     }
+     
+     public ResultSet retrieveImage(int id){
+ 
+        String valQuery = String.format(
+                "SELECT tr_image from registration_table where tr_id=%d",id);
+        dbConnection = new DbConnection();
+        ResultSet result = dbConnection.retrieve(valQuery);
+        return result;
+
+    }
     
 }
