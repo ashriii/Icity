@@ -54,7 +54,7 @@ public class Profilescreen extends javax.swing.JFrame {
         jPanel_BackButton_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_Edit_.setBackground(new java.awt.Color(153, 153, 153));
-        jButton_Edit_.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jButton_Edit_.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jButton_Edit_.setText("Edit");
         jButton_Edit_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,73 +63,56 @@ public class Profilescreen extends javax.swing.JFrame {
         });
         jPanel_BackButton_.add(jButton_Edit_, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
 
-        label1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        label1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         label1.setText("Username:");
         jPanel_BackButton_.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
 
-        label2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        label2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         label2.setText("About");
         jPanel_BackButton_.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
-        label3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        label3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         label3.setText("Phone:");
         jPanel_BackButton_.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 60, 20));
 
-        label4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        label4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         label4.setText("E-Mail:");
         jPanel_BackButton_.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/pro 1.png"))); // NOI18N
         jPanel_BackButton_.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 80, 100));
 
-        jLabel_ProfileName_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_ProfileName_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jLabel_ProfileName_.setText("Alex Thapa");
         jPanel_BackButton_.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 110, 20));
 
-        jLabel_Name_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel_Name_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         TravellerController t1 = new TravellerController();
         ResultSet rs=t1.fetchTraveller(userId);
         try{
-            String name;
-            String email1;
-            String number;
-            String profile;
             while(rs.next()){
-                name=rs.getString("tr_name");
-                jLabel_Name_.setText(name);
-
-                profile=rs.getString("tr_name");
-                jLabel_ProfileName_.setText(profile);
-                
-                number=rs.getString("tr_number");
-                jLabel_Number_.setText(number);
-
-                email1=rs.getString("tr_email");
-                jLabel_Email_.setText(email1);
-
-
+                jLabel_Name_.setText(rs.getString("tr_name"));
             }}
             catch(Exception e){
                 e.printStackTrace();
-
             }
             jPanel_BackButton_.add(jLabel_Name_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 180, 20));
 
-            jLabel_Number_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jLabel_Number_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jLabel_Number_.setText("9825631478");
             jPanel_BackButton_.add(jLabel_Number_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 120, 20));
 
-            jLabel_Email_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jLabel_Email_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jLabel_Email_.setText("alex123@gmail.com");
             jPanel_BackButton_.add(jLabel_Email_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 200, 20));
 
-            getContentPane().add(jPanel_BackButton_, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 470, 330));
+            getContentPane().add(jPanel_BackButton_, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 470, 330));
 
             jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
             getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 60));
 
             jButton_Back_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Back_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Back_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jButton_Back_.setText("Back");
             jButton_Back_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -4,15 +4,12 @@
  */
 package view;
 import controller.TravellerController;
-<<<<<<< HEAD
-=======
 
 import controller.HospitalController;
 import controller.OfficeController;
 import controller.TouristAreaController;
 import controller.ParkController;
 import controller.MarketController;
->>>>>>> paribesh
 import java.sql.*;
 
 import javax.swing.JOptionPane;
@@ -48,12 +45,12 @@ public class UserDashBoard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton_Profile_ = new javax.swing.JButton();
         jLabel_Welcome_ = new java.awt.Label();
-        jButton_Admin_ = new javax.swing.JButton();
         jButton_Hospital_ = new javax.swing.JButton();
+        jButton_Profile_1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton_LogOut_ = new javax.swing.JButton();
-        jButton_Profile_ = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton_Market_ = new javax.swing.JButton();
         jButton_Office_ = new javax.swing.JButton();
@@ -69,33 +66,33 @@ public class UserDashBoard extends javax.swing.JFrame {
         setFocusTraversalPolicyProvider(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton_Profile_.setBackground(new java.awt.Color(0, 102, 102));
+        jButton_Profile_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        jButton_Profile_.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_Profile_.setText("Profile");
+        jButton_Profile_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_Profile_ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_Profile_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 110, 30));
+
         jLabel_Welcome_.setBackground(new java.awt.Color(204, 255, 255));
         jLabel_Welcome_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel_Welcome_.setText("Welcome User");
         TravellerController t1 = new TravellerController();
-        ResultSet rs=t1.fetchTraveller(userId);
+        ResultSet rs=t1.fetchTraveller(id);
         try{
             while(rs.next()){
-                jLabel_Welcome_.setText("Welcome "+ rs.getText("tr_name"));
+                jLabel_Welcome_.setText("Welcome "+ rs.getString("tr_name"));
             }}
-            catch(Excpetion e){
+            catch(Exception e){
                 e.printStackTrace();
             }
             getContentPane().add(jLabel_Welcome_, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 250, 40));
 
-            jButton_Admin_.setBackground(new java.awt.Color(0, 102, 102));
-            jButton_Admin_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-            jButton_Admin_.setForeground(new java.awt.Color(255, 255, 255));
-            jButton_Admin_.setText("Admin");
-            jButton_Admin_.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton_Admin_ActionPerformed(evt);
-                }
-            });
-            getContentPane().add(jButton_Admin_, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
-
             jButton_Hospital_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Hospital_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Hospital_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jButton_Hospital_.setText("Hospital");
             jButton_Hospital_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +100,18 @@ public class UserDashBoard extends javax.swing.JFrame {
                 }
             });
             getContentPane().add(jButton_Hospital_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 120, 30));
-
+            if(id==arrayId[0]){
+            jButton_Profile_1.setBackground(new java.awt.Color(0, 102, 102));
+            jButton_Profile_1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+            jButton_Profile_1.setForeground(new java.awt.Color(255, 255, 255));
+            jButton_Profile_1.setText("Admin");
+            jButton_Profile_1.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_Profile_1ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(jButton_Profile_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 110, 30));
+        }
             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
             jLabel2.setText("jLabel2");
             getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 70));
@@ -120,23 +128,12 @@ public class UserDashBoard extends javax.swing.JFrame {
             });
             getContentPane().add(jButton_LogOut_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 20, 110, 30));
 
-            jButton_Profile_.setBackground(new java.awt.Color(0, 102, 102));
-            jButton_Profile_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-            jButton_Profile_.setForeground(new java.awt.Color(255, 255, 255));
-            jButton_Profile_.setText("Profile");
-            jButton_Profile_.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton_Profile_ActionPerformed(evt);
-                }
-            });
-            getContentPane().add(jButton_Profile_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 110, 30));
-
             jLabel1.setBackground(new java.awt.Color(102, 255, 255));
             jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
 
             jButton_Market_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Market_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Market_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jButton_Market_.setText("Markets");
             jButton_Market_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +143,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jButton_Market_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
 
             jButton_Office_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Office_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Office_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jButton_Office_.setText("Offices");
             jButton_Office_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,17 +153,17 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jButton_Office_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, 30));
 
             jButton_TouristArea_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_TouristArea_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_TouristArea_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jButton_TouristArea_.setText("Tourist Area");
             jButton_TouristArea_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton_TouristArea_ActionPerformed(evt);
+                    jButton8ActionPerformed(evt);
                 }
             });
             getContentPane().add(jButton_TouristArea_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
 
             jButton_Park_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Park_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_Park_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jButton_Park_.setText("Parks");
             jButton_Park_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,7 +186,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 800, 300));
 
             jButton_School_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_School_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            jButton_School_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
             jButton_School_.setText("School");
             jButton_School_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,10 +220,6 @@ public class UserDashBoard extends javax.swing.JFrame {
         new adminboard().setVisible(true);
     }//GEN-LAST:event_jButton_Profile_1ActionPerformed
 
-<<<<<<< HEAD
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-=======
     private void jButton_School_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_School_ActionPerformed
         SchoolController sc =new SchoolController();
         ResultSet rs = sc.fetchSchool();
@@ -255,16 +248,7 @@ public class UserDashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_School_ActionPerformed
 
 
-    private void jButton_Hospital_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Hospital_ActionPerformed
-        
-        
-        
-    }//GEN-LAST:event_jButton_Hospital_ActionPerformed
-
-    private void jButton_TouristArea_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TouristArea_ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_TouristArea_ActionPerformed
-
+    
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
       HospitalController hc =new HospitalController();
         ResultSet rs = hc.fetchHospital();
@@ -290,10 +274,9 @@ public class UserDashBoard extends javax.swing.JFrame {
         } catch (Exception ex) {  //handeling the error
             ex.printStackTrace();
         }
->>>>>>> paribesh
     }//GEN-LAST:event_jButton6ActionPerformed
 
-<<<<<<< HEAD
+
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         OfficeController oc =new OfficeController(); //controller from the office to update the code
         ResultSet rs = oc.fetchOffice();
@@ -320,15 +303,6 @@ public class UserDashBoard extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton7ActionPerformed
-<<<<<<< HEAD
->>>>>>> b969a4ac4e3dd68e4a47fbcb399cd2d21bcce695
-=======
-    private void jButton_School_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_School_ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_School_ActionPerformed
->>>>>>> 4d64a6638dc53d624b4dfc07bc6ddde9bba37f7e
-
-=======
 
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -413,7 +387,7 @@ public class UserDashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
 
->>>>>>> paribesh
+
     /**
      * @param args the command line arguments
      */
@@ -450,13 +424,13 @@ public class UserDashBoard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_Admin_;
     private javax.swing.JButton jButton_Hospital_;
     private javax.swing.JButton jButton_LogOut_;
     private javax.swing.JButton jButton_Market_;
     private javax.swing.JButton jButton_Office_;
     private javax.swing.JButton jButton_Park_;
     private javax.swing.JButton jButton_Profile_;
+    private javax.swing.JButton jButton_Profile_1;
     private javax.swing.JButton jButton_School_;
     private javax.swing.JButton jButton_TouristArea_;
     private javax.swing.JLabel jLabel1;
