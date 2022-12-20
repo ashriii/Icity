@@ -4,7 +4,11 @@
  */
 package view;
 import controller.TravellerController;
+import java.io.File;
 import java.sql.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileSystemView;
 /**
  *
  * @author HP
@@ -15,6 +19,7 @@ public class Profilescreen extends javax.swing.JFrame {
     String number;
     String email;
     ResultSet data;
+    JFileChooser file;
     /**
      * Creates new form Profile
      */
@@ -33,7 +38,6 @@ public class Profilescreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel_BackButton_ = new javax.swing.JPanel();
-        jButton_Edit_ = new javax.swing.JButton();
         label1 = new java.awt.Label();
         label2 = new java.awt.Label();
         label3 = new java.awt.Label();
@@ -43,6 +47,8 @@ public class Profilescreen extends javax.swing.JFrame {
         jLabel_Name_ = new javax.swing.JLabel();
         jLabel_Number_ = new javax.swing.JLabel();
         jLabel_Email_ = new javax.swing.JLabel();
+        jButton_Edit_1 = new javax.swing.JButton();
+        jButton_Edit_2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jButton_Back_ = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -53,40 +59,30 @@ public class Profilescreen extends javax.swing.JFrame {
         jPanel_BackButton_.setBackground(new java.awt.Color(0, 102, 102));
         jPanel_BackButton_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton_Edit_.setBackground(new java.awt.Color(153, 153, 153));
-        jButton_Edit_.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        jButton_Edit_.setText("Edit");
-        jButton_Edit_.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_Edit_ActionPerformed(evt);
-            }
-        });
-        jPanel_BackButton_.add(jButton_Edit_, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
-
-        label1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        label1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label1.setText("Username:");
         jPanel_BackButton_.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
 
-        label2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        label2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         label2.setText("About");
         jPanel_BackButton_.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
-        label3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        label3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label3.setText("Phone:");
         jPanel_BackButton_.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 60, 20));
 
-        label4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        label4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label4.setText("E-Mail:");
         jPanel_BackButton_.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/pro 1.png"))); // NOI18N
         jPanel_BackButton_.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 80, 100));
 
-        jLabel_ProfileName_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel_ProfileName_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_ProfileName_.setText("Alex Thapa");
         jPanel_BackButton_.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 110, 20));
 
-        jLabel_Name_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel_Name_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TravellerController t1 = new TravellerController();
         ResultSet rs=t1.fetchTraveller(userId);
         try{
@@ -98,13 +94,33 @@ public class Profilescreen extends javax.swing.JFrame {
             }
             jPanel_BackButton_.add(jLabel_Name_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 180, 20));
 
-            jLabel_Number_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jLabel_Number_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jLabel_Number_.setText("9825631478");
             jPanel_BackButton_.add(jLabel_Number_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 120, 20));
 
-            jLabel_Email_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jLabel_Email_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jLabel_Email_.setText("alex123@gmail.com");
             jPanel_BackButton_.add(jLabel_Email_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 200, 20));
+
+            jButton_Edit_1.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Edit_1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+            jButton_Edit_1.setText("Add Image");
+            jButton_Edit_1.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_Edit_1ActionPerformed(evt);
+                }
+            });
+            jPanel_BackButton_.add(jButton_Edit_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
+
+            jButton_Edit_2.setBackground(new java.awt.Color(153, 153, 153));
+            jButton_Edit_2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+            jButton_Edit_2.setText("Edit Profile");
+            jButton_Edit_2.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton_Edit_2ActionPerformed(evt);
+                }
+            });
+            jPanel_BackButton_.add(jButton_Edit_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, -1));
 
             getContentPane().add(jPanel_BackButton_, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 470, 330));
 
@@ -112,7 +128,7 @@ public class Profilescreen extends javax.swing.JFrame {
             getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 60));
 
             jButton_Back_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Back_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jButton_Back_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Back_.setText("Back");
             jButton_Back_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,19 +144,28 @@ public class Profilescreen extends javax.swing.JFrame {
             pack();
         }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_Edit_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_ActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-        Edit_Profile ed= new Edit_Profile(userId);  
-        ed.setVisible(true); //display the frame 
-        
-    }//GEN-LAST:event_jButton_Edit_ActionPerformed
-
     private void jButton_Back_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Back_ActionPerformed
         // TODO add your handling code here:
         this.hide();
         new UserDashBoard(userId).setVisible(true); //display the frame from the user dash board
     }//GEN-LAST:event_jButton_Back_ActionPerformed
+
+    private void jButton_Edit_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_1ActionPerformed
+//        new AddImage().setVisible(true);
+    file = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        int r = file.showOpenDialog(null);
+        
+        
+     if (r == JFileChooser.APPROVE_OPTION) {
+    
+    File selectedFile = file.getSelectedFile();
+    
+}
+    }//GEN-LAST:event_jButton_Edit_1ActionPerformed
+
+    private void jButton_Edit_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_Edit_2ActionPerformed
  
     /**
      * @param args the command line arguments
@@ -180,7 +205,8 @@ public class Profilescreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_Back_;
-    private javax.swing.JButton jButton_Edit_;
+    private javax.swing.JButton jButton_Edit_1;
+    private javax.swing.JButton jButton_Edit_2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

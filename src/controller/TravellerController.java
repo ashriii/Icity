@@ -81,8 +81,17 @@ public class TravellerController{
     }
     
     
+     public int insertImage(int id,String image){
+        String updateQuery=String.format(
+        "update registration_table set tr_image='%s' where tr_id='%d'",image,id);
+        
     
+        
     
+    dbConnection = new DbConnection();
+    int result = dbConnection.manipulate(updateQuery);
+    return result;   
+   
     
     
 }
