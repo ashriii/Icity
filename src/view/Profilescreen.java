@@ -19,7 +19,7 @@ public class Profilescreen extends javax.swing.JFrame {
      * Creates new form Profile
      */
     public Profilescreen(int userI) {
-        this.userId=userI;
+        this.userId=userI; //bringing nad connection the data from user id 
         initComponents();
     }
 
@@ -148,15 +148,15 @@ public class Profilescreen extends javax.swing.JFrame {
     private void jButton_Edit_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        Edit_Profile ed= new Edit_Profile(userId);
-        ed.setVisible(true);
+        Edit_Profile ed= new Edit_Profile(userId);  
+        ed.setVisible(true); //display the frame 
         
     }//GEN-LAST:event_jButton_Edit_ActionPerformed
 
     private void jButton_Back_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Back_ActionPerformed
         // TODO add your handling code here:
         this.hide();
-        new UserDashBoard(userId).setVisible(true);
+        new UserDashBoard(userId).setVisible(true); //display the frame from the user dash board
     }//GEN-LAST:event_jButton_Back_ActionPerformed
  
     /**
