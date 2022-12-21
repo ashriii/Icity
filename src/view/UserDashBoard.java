@@ -77,9 +77,10 @@ public class UserDashBoard extends javax.swing.JFrame {
         });
         getContentPane().add(jButton_Profile_, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 110, 30));
 
-        jLabel_Welcome_.setBackground(new java.awt.Color(204, 255, 255));
+        jLabel_Welcome_.setBackground(new java.awt.Color(204, 204, 204));
         jLabel_Welcome_.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel_Welcome_.setText("Welcome User");
+        jLabel_Welcome_.setAlignment(1);
         TravellerController t1 = new TravellerController();
         ResultSet rs=t1.fetchTraveller(id);
         try{
@@ -133,7 +134,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1280, 260));
 
             jButton_Market_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Market_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jButton_Market_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Market_.setText("Markets");
             jButton_Market_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,7 +144,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jButton_Market_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 30));
 
             jButton_Office_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Office_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jButton_Office_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Office_.setText("Offices");
             jButton_Office_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,7 +154,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jButton_Office_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, 30));
 
             jButton_TouristArea_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_TouristArea_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jButton_TouristArea_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_TouristArea_.setText("Tourist Area");
             jButton_TouristArea_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,7 +164,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jButton_TouristArea_, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 120, 30));
 
             jButton_Park_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Park_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jButton_Park_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Park_.setText("Parks");
             jButton_Park_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +187,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 800, 300));
 
             jButton_School_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_School_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jButton_School_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_School_.setText("School");
             jButton_School_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
