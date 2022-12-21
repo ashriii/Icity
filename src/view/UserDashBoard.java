@@ -337,7 +337,7 @@ public class UserDashBoard extends javax.swing.JFrame {
         ResultSet rs = pc.fetchPark();
         try {
             ResultSetMetaData rsmd=rs.getMetaData();
-            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
+            DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();  //adding model defult model 
             int colm=rsmd.getColumnCount();
             String[] colmnName=new String[colm];
             for(int i=0;i<colm;i++){
@@ -354,7 +354,7 @@ public class UserDashBoard extends javax.swing.JFrame {
                    String[] row={name,description,address,contact};
                    model.addRow(row);
                 }
-        } catch (Exception ex) {
+        } catch (Exception ex) {  //handling the exception 
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -367,7 +367,7 @@ public class UserDashBoard extends javax.swing.JFrame {
             DefaultTableModel model=(DefaultTableModel) jTable_Data_.getModel();
             int colm=rsmd.getColumnCount();
             String[] colmnName=new String[colm];
-            for(int i=0;i<colm;i++){
+            for(int i=0;i<colm;i++){   //using for loop for entering the data 
                 colmnName[i]=rsmd.getColumnName(i+1);
                 model.setColumnIdentifiers(colmnName);
             }
