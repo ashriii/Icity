@@ -75,13 +75,15 @@ public class Profilescreen extends javax.swing.JFrame {
         label4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label4.setText("E-Mail:");
         jPanel_BackButton_.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/pro 1.png"))); // NOI18N
+        //Image of profile added by user
+        
+        // NOI18N
         jPanel_BackButton_.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 80, 100));
 
         jLabel_ProfileName_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_ProfileName_.setText("Alex Thapa");
         jPanel_BackButton_.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 110, 20));
+        
 
         jLabel_Name_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TravellerController t1 = new TravellerController();
@@ -89,6 +91,8 @@ public class Profilescreen extends javax.swing.JFrame {
         try{
             while(rs.next()){
                 jLabel_Name_.setText(rs.getString("tr_name"));
+                // jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource(rs.getString("tr_image"))));
+                // System.out.println(rs.getString("tr_image"));
             }}
             catch(Exception e){
                 e.printStackTrace();
@@ -139,6 +143,8 @@ public class Profilescreen extends javax.swing.JFrame {
             getContentPane().add(jButton_Back_, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 90, 30));
 
             jLabel2.setBackground(new java.awt.Color(0, 102, 102));
+           
+        
             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -20, -1, -1));
 
@@ -160,11 +166,24 @@ public class Profilescreen extends javax.swing.JFrame {
     
     File selectedFile = file.getSelectedFile();
     String image=String.valueOf(selectedFile);
+    String[] arr=new String[image.length()];
+    String updatedImage="";
+        for(int i=0;i<=image.length()-1;i++){
+            if(image.charAt(i)=='\b'){
+                arr[i]="/";
+            }else{
+              arr[i]=String.valueOf(image.charAt(i));
+            }
+            updatedImage+=arr[i];
+        }
+         System.out.println(updatedImage);
+        
+
     int id=userId;
     
     TravellerController tc = new TravellerController();
-    int updatedImage=tc.insertImage(id, image);
-    if(updatedImage>0){
+    int updateImage=tc.insertImage(id, updatedImage);
+    if(updateImage>0){
         JOptionPane.showMessageDialog(null,"Image Updated");
     }
     else{
@@ -177,7 +196,8 @@ public class Profilescreen extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Edit_1ActionPerformed
 
     private void jButton_Edit_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_2ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new Edit_Profile(userId).setVisible(true);
     }//GEN-LAST:event_jButton_Edit_2ActionPerformed
  
     /**

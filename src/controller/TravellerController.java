@@ -93,14 +93,6 @@ public class TravellerController{
     return result;     
      }
      
-     public ResultSet retrieveImage(int id){
- 
-        String valQuery = String.format(
-                "SELECT tr_image from registration_table where tr_id=%d",id);
-        dbConnection = new DbConnection();
-        ResultSet result = dbConnection.retrieve(valQuery);
-        return result;
-
-    }
+    
     
 }
