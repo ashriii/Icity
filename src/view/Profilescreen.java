@@ -10,6 +10,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileSystemView;
+import java.awt.*;
+
 /**
  *
  * @author HP
@@ -43,7 +45,7 @@ public class Profilescreen extends javax.swing.JFrame {
         label2 = new java.awt.Label();
         label3 = new java.awt.Label();
         label4 = new java.awt.Label();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel_Profile_Image_ = new javax.swing.JLabel();
         jLabel_ProfileName_ = new javax.swing.JLabel();
         jLabel_Name_ = new javax.swing.JLabel();
         jLabel_Number_ = new javax.swing.JLabel();
@@ -75,23 +77,26 @@ public class Profilescreen extends javax.swing.JFrame {
         label4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label4.setText("E-Mail:");
         jPanel_BackButton_.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
-        //Image of profile added by user
-        
-        // NOI18N
-        jPanel_BackButton_.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 80, 100));
+
+        jLabel_Profile_Image_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/pro 1.png"))); // NOI18N
+        jPanel_BackButton_.add(jLabel_Profile_Image_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 130, 130));
 
         jLabel_ProfileName_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_ProfileName_.setText("Alex Thapa");
-        jPanel_BackButton_.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 110, 20));
-        
+        jPanel_BackButton_.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 110, 20));
 
         jLabel_Name_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TravellerController t1 = new TravellerController();
         ResultSet rs=t1.fetchTraveller(userId);
         try{
             while(rs.next()){
+                jLabel_ProfileName_.setText(rs.getString("tr_name"));
                 jLabel_Name_.setText(rs.getString("tr_name"));
-                // jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource(rs.getString("tr_image"))));
+                jLabel_Email_.setText(rs.getString("tr_email"));
+                jLabel_Number_.setText(rs.getString("tr_number"));
+
+                jLabel_Profile_Image_.setIcon(new ImageIcon(new ImageIcon(rs.getString("tr_image")).getImage().getScaledInstance(140, 160, Image.SCALE_DEFAULT)));
+                
                 // System.out.println(rs.getString("tr_image"));
             }}
             catch(Exception e){
@@ -143,8 +148,6 @@ public class Profilescreen extends javax.swing.JFrame {
             getContentPane().add(jButton_Back_, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 90, 30));
 
             jLabel2.setBackground(new java.awt.Color(0, 102, 102));
-           
-        
             jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/315528616_2761970403936886_6157968893734964065_n.jpg"))); // NOI18N
             getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -20, -1, -1));
 
@@ -169,7 +172,7 @@ public class Profilescreen extends javax.swing.JFrame {
     String[] arr=new String[image.length()];
     String updatedImage="";
         for(int i=0;i<=image.length()-1;i++){
-            if(image.charAt(i)=='\b'){
+            if(image.charAt(i)=='\\'){
                 arr[i]="/";
             }else{
               arr[i]=String.valueOf(image.charAt(i));
@@ -193,6 +196,7 @@ public class Profilescreen extends javax.swing.JFrame {
     
     
 }
+   
     }//GEN-LAST:event_jButton_Edit_1ActionPerformed
 
     private void jButton_Edit_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Edit_2ActionPerformed
@@ -240,13 +244,13 @@ public class Profilescreen extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Back_;
     private javax.swing.JButton jButton_Edit_1;
     private javax.swing.JButton jButton_Edit_2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel_Email_;
     private javax.swing.JLabel jLabel_Name_;
     private javax.swing.JLabel jLabel_Number_;
     private javax.swing.JLabel jLabel_ProfileName_;
+    private javax.swing.JLabel jLabel_Profile_Image_;
     private javax.swing.JPanel jPanel_BackButton_;
     private java.awt.Label label1;
     private java.awt.Label label2;
