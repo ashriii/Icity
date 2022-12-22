@@ -27,7 +27,7 @@ public class Profilescreen extends javax.swing.JFrame {
      * Creates new form Profile
      */
     public Profilescreen(int userI) {
-        this.userId=userI; //bringing nad connection the data from user id 
+        this.userId=userI; //bringing and connection the data from user id 
         initComponents();
     }
 
@@ -171,7 +171,7 @@ public class Profilescreen extends javax.swing.JFrame {
     File selectedFile = file.getSelectedFile();
     String image=String.valueOf(selectedFile);
     String[] arr=new String[image.length()];
-    String updatedImage="";
+    String updatedImage="";    //update the image using the following code or for loop
         for(int i=0;i<=image.length()-1;i++){
             if(image.charAt(i)=='\\'){
                 arr[i]="/";
