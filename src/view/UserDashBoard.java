@@ -289,6 +289,9 @@ public class UserDashBoard extends javax.swing.JFrame {
             for(int i=0;i<colm;i++){
                 colmnName[i]=rsmd.getColumnName(i+1);
                 model.setColumnIdentifiers(colmnName);
+                
+//                String columnName=rsmd.getColumnName(i);
+//                rsmd.setColumnName(i,  + "");
             }
             
             while(rs.next()){
@@ -422,6 +425,9 @@ public class UserDashBoard extends javax.swing.JFrame {
                 new UserDashBoard(1).setVisible(true);
             }
         });
+        
+//        colmnName[i]=rsmd.getColumnName(i+1);
+//                model.setColumnIdentifiers(colmnName);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

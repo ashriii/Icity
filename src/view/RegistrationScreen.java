@@ -40,7 +40,6 @@ public class RegistrationScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -67,17 +66,13 @@ public class RegistrationScreen extends javax.swing.JFrame {
         jLabel9.setText("jLabel9");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 80));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hp\\Desktop\\Project smart city\\op 1.png")); // NOI18N
-        jLabel10.setText("jLabel10");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 410, 270));
-
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel11.setText("Find all kind of Information and ");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 260, 30));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 260, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("Communication Technologies (ICT)here");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 310, 30));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 310, 30));
 
         jPanel1.setBackground(new java.awt.Color(73, 161, 161));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -220,7 +215,7 @@ public class RegistrationScreen extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 380, 430));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 380, 430));
 
         jLabel1.setForeground(new java.awt.Color(0, 0, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hp\\Desktop\\Project smart city\\Rectangle 1.png")); // NOI18N
@@ -271,9 +266,12 @@ public class RegistrationScreen extends javax.swing.JFrame {
                 this.dispose();
                 UserDashBoard user1=new UserDashBoard(retrievedTraveller.getInt("tr_id"));
                 user1.setVisible(true);
+                
             }
             else{
              JOptionPane.showMessageDialog(null,"Please enter valid email or password.");
+//             jButton_Create_Account_.setText(null);
+             
             }
          } catch (Exception ex) {
              java.util.logging.Logger.getLogger(loginpage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -353,7 +351,6 @@ public class RegistrationScreen extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Create_Account_;
     private javax.swing.JButton jButton_SignIn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;

@@ -58,17 +58,17 @@ public class Edit_Profile extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel3.setText("Full Name");
 
-        jTextField_FullName_.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        jTextField_FullName_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel7.setText("Email Address");
 
-        jTextField_Email_.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        jTextField_Email_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel8.setText("Contact Number");
 
-        jTextField_Number_.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        jTextField_Number_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jTextField_Number_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_Number_ActionPerformed(evt);
