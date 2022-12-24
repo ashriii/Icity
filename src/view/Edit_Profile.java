@@ -164,13 +164,13 @@ public class Edit_Profile extends javax.swing.JFrame {
         String number=jTextField_Number_.getText();
            
         TravellerController tcc= new TravellerController();
-        int updatedTravellerProfile=tcc.updateTravellerProfile(id,name,email, number);
+        int updatedTravellerProfile=tcc.updateTravellerProfile(id,name,email, number);//update the profile 
         
         if(updatedTravellerProfile>0){
         JOptionPane.showMessageDialog(null,"Profile Updated");
         }
         else{
-        JOptionPane.showMessageDialog(null,"Error in updating profile");
+        JOptionPane.showMessageDialog(null,"Error in updating profile");//handling the error
 
         }
         
@@ -213,7 +213,8 @@ public class Edit_Profile extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Edit_Profile(1).setVisible(true);
+                new Edit_Profile(1).setVisible(true);//display the edit profile'
+                
             }
         });
     }

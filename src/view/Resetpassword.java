@@ -24,7 +24,7 @@ public class Resetpassword extends javax.swing.JFrame {
     public String email ="";
     public String number="";
     
-    public Resetpassword(String email,String number){
+    public Resetpassword(String email,String number){//calling the method
             this.email=email;
             this.number=number;
             initComponents();
@@ -171,7 +171,7 @@ public class Resetpassword extends javax.swing.JFrame {
         String newConfirmPassword =jTextField_Confirm_Password_.getText();
         
         if(newPassword==newConfirmPassword){
-            TravellerController ut= new TravellerController();
+            TravellerController ut= new TravellerController();//connecting the data in travellercontroller
             ut.updateTraveller(email, number, newPassword );
             JOptionPane.showMessageDialog(null,"Password Updated");
 
