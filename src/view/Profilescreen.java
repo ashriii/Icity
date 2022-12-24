@@ -62,30 +62,30 @@ public class Profilescreen extends javax.swing.JFrame {
         jPanel_BackButton_.setBackground(new java.awt.Color(0, 102, 102));
         jPanel_BackButton_.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        label1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        label1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label1.setText("Username:");
         jPanel_BackButton_.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
 
-        label2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        label2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         label2.setText("About");
         jPanel_BackButton_.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
-        label3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        label3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label3.setText("Phone:");
         jPanel_BackButton_.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 60, 20));
 
-        label4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        label4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         label4.setText("E-Mail:");
         jPanel_BackButton_.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
         jLabel_Profile_Image_.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/pro 1.png"))); // NOI18N
         jPanel_BackButton_.add(jLabel_Profile_Image_, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 130, 130));
 
-        jLabel_ProfileName_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel_ProfileName_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel_ProfileName_.setText("Alex Thapa");
         jPanel_BackButton_.add(jLabel_ProfileName_, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 110, 20));
 
-        jLabel_Name_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        jLabel_Name_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TravellerController t1 = new TravellerController();
         ResultSet rs=t1.fetchTraveller(userId);
         try{
@@ -104,16 +104,16 @@ public class Profilescreen extends javax.swing.JFrame {
             }
             jPanel_BackButton_.add(jLabel_Name_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 180, 20));
 
-            jLabel_Number_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-            jLabel_Number_.setText("9825631478");
+            jLabel_Number_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            // jLabel_Number_.setText("9825631478");
             jPanel_BackButton_.add(jLabel_Number_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 120, 20));
 
-            jLabel_Email_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-            jLabel_Email_.setText("alex123@gmail.com");
+            jLabel_Email_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            // jLabel_Email_.setText("alex123@gmail.com");
             jPanel_BackButton_.add(jLabel_Email_, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 200, 20));
 
             jButton_Edit_1.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Edit_1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+            jButton_Edit_1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
             jButton_Edit_1.setText("Add Image");
             jButton_Edit_1.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,7 @@ public class Profilescreen extends javax.swing.JFrame {
             jPanel_BackButton_.add(jButton_Edit_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
 
             jButton_Edit_2.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Edit_2.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+            jButton_Edit_2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
             jButton_Edit_2.setText("Edit Profile");
             jButton_Edit_2.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,8 +137,8 @@ public class Profilescreen extends javax.swing.JFrame {
             jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/logo 5.png"))); // NOI18N
             getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 60));
 
-            jButton_Back_.setBackground(new java.awt.Color(153, 153, 153));
-            jButton_Back_.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+            jButton_Back_.setBackground(new java.awt.Color(0, 102, 102));
+            jButton_Back_.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
             jButton_Back_.setText("Back");
             jButton_Back_.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
