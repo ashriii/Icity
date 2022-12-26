@@ -81,7 +81,7 @@ public class TravellerController{
     }
     
     
-     public int insertImage(int id1,String image1){
+     public int insertImage(int id1,String image1){ //inserting the image form local storage
         int id=id1;
         String image=image1;
      
