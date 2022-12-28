@@ -6,10 +6,7 @@ package view;
 import controller.TravellerController;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author user
- */
+
 public class Edit_Profile extends javax.swing.JFrame {
     int id;
     /**
