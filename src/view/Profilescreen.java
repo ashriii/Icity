@@ -236,7 +236,7 @@ public class Profilescreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Profilescreen(1).setVisible(true);
+                new Profilescreen(1).setVisible (true);
             }
         });
     }
