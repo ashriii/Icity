@@ -205,20 +205,19 @@ public class UserDashBoard extends javax.swing.JFrame {
     private void jButton_Profile_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Profile_ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new Profilescreen(id).setVisible(true);
-        
+        new Profilescreen(id).setVisible(true); //display the profile page
         
     }//GEN-LAST:event_jButton_Profile_ActionPerformed
 
     private void jButton_LogOut_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LogOut_ActionPerformed
         this.dispose();
-        new loginpage().setVisible(true);
+        new loginpage().setVisible(true); //display the login page
     }//GEN-LAST:event_jButton_LogOut_ActionPerformed
 
     private void jButton_Profile_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Profile_1ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new adminboard().setVisible(true);
+        new adminboard().setVisible(true); //display the admin page
     }//GEN-LAST:event_jButton_Profile_1ActionPerformed
 
     private void jButton_School_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_School_ActionPerformed
