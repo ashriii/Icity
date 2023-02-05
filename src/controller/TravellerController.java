@@ -68,7 +68,7 @@ public class TravellerController{
 
     }
     
-    public int updateTravellerProfile(int id, String name2, String email2, String number2) {
+    public int updateTravellerProfile(int id, String name2, String email2, String number2) { //connecting the data of update profile
         String name =name2;
         String email=email2;
         String number=number2;
@@ -81,7 +81,7 @@ public class TravellerController{
     }
     
     
-     public int insertImage(int id1,String image1){
+     public int insertImage(int id1,String image1){ //inserting the image form local storage
         int id=id1;
         String image=image1;
      

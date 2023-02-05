@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/Edit_Profile.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/RegistrationScreen.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/UserDashBoard.java</file>
@@ -20,6 +21,22 @@
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/loginpage.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/SelectCategory.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/ReviewPage.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/controller/HospitalController.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/Profilescreen.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/database/DbConnection.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/Resetpassword.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/UserDashBoard.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/adminboard.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/Edit_Profile.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/controller/TravellerController.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/loginpage.java</file>
+            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/forgetpassword.java</file>
+=======
+            <file>file:/C:/Users/HP/OneDrive/Desktop/Final%20Project/icity/src/database/DbConnection.java</file>
+>>>>>>> ashriyaDb
+>>>>>>> origin/master
         </group>
     </open-files>
 </project-private>

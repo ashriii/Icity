@@ -268,7 +268,7 @@ public class adminboard extends javax.swing.JFrame {
                 
                 SchoolController sc = new SchoolController();
                 int updatedSchool = sc.updateSchool(id, name, description, address, contact);
-                if (updatedSchool>0){
+                if (updatedSchool>0){ //updated the school data 
                     JOptionPane.showMessageDialog(null,"School updated successfully.");
                     
                 }
