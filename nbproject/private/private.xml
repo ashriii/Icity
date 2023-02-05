@@ -3,24 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/forgetpassword.java</file>
-            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/Resetpassword.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/Edit_Profile.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/RegistrationScreen.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/UserDashBoard.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/Profilescreen.java</file>
-            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/loginpage.java</file>
             <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/controller/TravellerController.java</file>
-=======
-            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/controller/HospitalController.java</file>
-            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/Profilescreen.java</file>
-            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/Resetpassword.java</file>
-            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/UserDashBoard.java</file>
-            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/adminboard.java</file>
-            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/loginpage.java</file>
-            <file>file:/C:/Users/user/Desktop/IIIcity/Icity/src/view/forgetpassword.java</file>
->>>>>>> ef6e6ebda41dc161be88a5124532508249cec162
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/database/DbConnection.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/adminboard.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/forgetpassword.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/Resetpassword.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Tourist_area.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/SelectCity.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/model/Traveller.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/TravellersScreen.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/admin.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/loginpage.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/SelectCategory.java</file>
+            <file>file:/C:/Users/Hp/Desktop/Finale%20Project/Icity/src/view/ReviewPage.java</file>
         </group>
     </open-files>
 </project-private>

@@ -231,7 +231,9 @@ public class RegistrationScreen extends javax.swing.JFrame {
         String email = jTextField_Email_.getText();
         String phoneNumber = jTextField_Phone_Number_.getText();
         String password = String.valueOf(jPasswordField_Password_.getPassword());
-//        String confirmPassword = String.valueOf(jPasswordField_Confirm_Password_.getPassword());
+        String confirmPassword = String.valueOf(jPasswordField_Confirm_Password_.getPassword());
+        
+        
         
         
         String num="";
@@ -276,16 +278,12 @@ public class RegistrationScreen extends javax.swing.JFrame {
          } catch (Exception ex) {
              java.util.logging.Logger.getLogger(loginpage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
          }
-             
+        }     
             
-        } else {
-            System.out.println("Failed to insert traveller");
+         else {
+             JOptionPane.showMessageDialog(null,"Please enter valid information");
         }
-        
-        
-        
-        
-   
+          
     }//GEN-LAST:event_jButton_Create_Account_ActionPerformed
 
     private void jTextField_Name_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_Name_ActionPerformed
@@ -302,9 +300,6 @@ public class RegistrationScreen extends javax.swing.JFrame {
             this.dispose();
             loginpage log = new loginpage();
             log.setVisible(true);
-
-            
-            
             
     }//GEN-LAST:event_jButton_SignInActionPerformed
 

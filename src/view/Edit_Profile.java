@@ -157,7 +157,7 @@ public class Edit_Profile extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField_Number_ActionPerformed
 
     private void jButton_Update_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Update_ActionPerformed
-           // TODO add your handling code here:
+           //TODO add your handling code here:
            
         String name =jTextField_FullName_.getText();
         String email=jTextField_Email_.getText();
@@ -167,6 +167,7 @@ public class Edit_Profile extends javax.swing.JFrame {
         int updatedTravellerProfile=tcc.updateTravellerProfile(id,name,email, number);
         
         if(updatedTravellerProfile>0){
+        System.out.println("Profile Updated");
         JOptionPane.showMessageDialog(null,"Profile Updated");
         }
         else{

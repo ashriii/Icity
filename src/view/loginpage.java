@@ -310,12 +310,8 @@ public class loginpage extends javax.swing.JFrame {
         
         try {
 
-
-            if(email1.equals("") && password1.equals("")){
-                JOptionPane.showMessageDialog(null,"Email and password field cannot be empty");
-           }
-   
             if(retrievedTraveller.next()){
+                System.out.println("Successfully loggen in");
                 
                 this.dispose();
                 UserDashBoard user1=new UserDashBoard(retrievedTraveller.getInt("tr_id"));

@@ -255,6 +255,7 @@ public class adminboard extends javax.swing.JFrame {
                 HospitalController hc = new HospitalController();
                 int updatedHospital=hc.updateHospital(id,name,description,address,contact);
                 if (updatedHospital>0){
+                    System.out.println("Inserted successfully");
                     JOptionPane.showMessageDialog(null,"Hospital updated successfully.");
                     
                 }
